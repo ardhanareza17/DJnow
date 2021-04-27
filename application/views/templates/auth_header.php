@@ -23,7 +23,4 @@
         <div class="boxdaftar">
             <div class="position-absolute top-50 start-50 translate-middle text-center">
               <div class="formdaftar">
-                <form class="logologo">
-                  <a href="index.html">
-                    <img src="<?= base_url('assets/'); ?>res/logo.png" alt="DJNOW (Design Jaman Now)" width="185">
-                  </a>
+                

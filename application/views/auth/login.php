@@ -1,6 +1,10 @@
 
 
-                </form>
+              <form form class="logologo" method="post" action="<?= base_url('auth'); ?>">
+                  <a href="<?= base_url('auth'); ?>">
+                    <img src="<?= base_url('assets/'); ?>res/logo.png" alt="DJNOW (Design Jaman Now)" width="185">
+                  </a>
+              </form>
                 <form>
                   <input class=" form-control lengkap w-75" type="text" id="uname" name="username" placeholder="Username">
                   <input class=" form-control lengkap validate w-75" type="password" id="password" name="password" placeholder="Password">
