@@ -6,9 +6,13 @@
                   </a>
               </form>
               <?= $this->session->flashdata('pesan');  ?>
-                <form>
-                  <input class=" form-control lengkap w-75" type="text" id="uname" name="username" placeholder="Username">
+                <form action='<?= base_url('auth'); ?>' method='post'>
+                  <input class=" form-control lengkap w-75" type="text" id="uname" name="username" placeholder="Username" value='<?= set_value('username'); ?>'  >
+                  <small class="text-danger"><?= form_error('username');  ?></small> 
+
                   <input class=" form-control lengkap validate w-75" type="password" id="password" name="password" placeholder="Password">
+                  <small class="text-danger"><?= form_error('password');  ?></small> 
+
                   <div class="d-grid gap-2 col-6 mx-auto text-center w-75">
                     <button type="sumbit" class="btn white-text btn-lg btndaftar">Masuk</button>
                   </div>           
