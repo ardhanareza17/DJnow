@@ -163,7 +163,7 @@
 		<!-- top bar-->
 		<div id="orange_bar">
 
-			<div style="width: 800px; margin:auto;font-size: 30px" >
+			<div style="width: 800px; margin-top:-10px; margin-left:250px;font-size: 30px" >
 
 				<img id="rata" src="res/logo.png"  width="60" height="30" >
 
