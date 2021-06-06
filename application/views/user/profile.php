@@ -91,57 +91,57 @@
 		<!-- top bar-->
 		<div id="orange_bar">
 			<div style="width: 900px; margin:auto;font-size: 30px">
-				<img id="rata" src="./Profile_files/logo.png" width="60" height="30">
+				<img id="rata" src="<?= base_url('assets'); ?>/res/logo.png" width="60" height="30">
 				&nbsp;<input type="text" id="search_box" placeholder="Cari di DJNow">
-				<img id="rata1" src="./Profile_files/logout2.png" style="width:20px ; height:20px; float:right;">
-				<img id="rata1" src="./Profile_files/profile.png" style="width:20px ; height:20px; float:right;">
-				<img id="rata1" src="./Profile_files/notifikasi1.png" style="width:20px ; height:20px; float:right;">
-				<img id="rata1" src="./Profile_files/home4.png" style="width:20px ; height:20px; float:right;">
+				<a href="<?= base_url('auth/logout'); ?>">
+				<img id="rata1" src="<?= base_url('res'); ?>/logout2.png" style="width:20px ; height:20px; float:right;">
+				<a>
+				<a href="<?= base_url('user/profile '); ?>">
+				<img id="rata1" src="<?= base_url('res'); ?>/profile/<?= $user['foto']?>" style="width:20px ; height:20px; float:right;">
+				<a>
+				<img id="rata1" src="<?= base_url('res'); ?>/notifikasi1.png" style="width:20px ; height:20px; float:right;">
+				<a href="<?= base_url('User'); ?>">
+				<img id="rata1" src="<?= base_url('res'); ?>/home4.png" style="width:20px ; height:20px; float:right;">
+				<a>
 
 				<!--bio profile-->
 				<div style="display: flex;">
 					<div id="story" style="width:460px;height: 530px; margin: left; margin-left: -5px; margin-top:20px;background-color: #FDFAE6; min-height: 400px;">
 						<div>
-							<img id="img_story" src="./Profile_files/me.jpg">	
+							<img id="img_story" src="<?= base_url('res'); ?>/profile/<?= $user['foto']?>">	
 						</div>
 						<div id="nametag" style="text-align: center; font-weight: bold;color: #C13301;">
-							@Ronsu
+							<?= '@', $user['username']; ?>
 						</div>
 						<br>
 						
 						<p style="text-align: center;font-size: 18px; font-weight: bold; color: black;">
-							Hi, perkenalkan saya Ronsu. Meskipun saya 
-							bukan sarjana dari bidang per design-an, 
-							saya senang dan suka dibidang 
-							<span style="color: #C13301"><span><span style="color: #C13301">desain grafis</span></span></span> 
-							ini.
-							Kumpulan foto disamping juga merupakan hasil 
-							desain saya.
+              <?= $user['user_bio']; ?>
+							Kumpulan foto disamping merupakan hasil 
+							desainku.
+						</p> 
+						<p style="text-align: center;font-size: 18px; font-weight: bold; color: black;">
+							Kalau tertarik dengan karya desainku, kalian bisa hubungi aku di :
+
+              <?= $user['kontak']; ?> atau
+							<?= $user['email']; ?>
 						</p> 
 						<button id="button0" style="color:white;">
 							Edit Profile
 						</button>
-						<div style="display: flex;">
-							<button id="button1" style="color:white;">
-								Contact
-							</button>
-							<button id="button1" style="color:white;">
-								Email
-							</button>
-						</div> 
 					</div>
 					
 					<!-- PORTOFOLIO	-->
 					<div id="story" style="width:460px;height: 530px; margin: left; margin-left: 5px; margin-top:16px;background-color:#FFE5B4; min-height: 400px;">
-						<img id="portofolio" src="./Profile_files/desain3.jpg">
-						<img id="portofolio" src="./Profile_files/desain6.jpg">
-						<img id="portofolio" src="./Profile_files/desain5.jpg">
-						<img id="portofolio" src="./Profile_files/desain9.jpg">
-						<img id="portofolio" src="./Profile_files/desain8.jpg">
-						<img id="portofolio" src="./Profile_files/desain7.jpg">
-						<img id="portofolio" src="./Profile_files/desain1.jpg">
-						<img id="portofolio" src="./Profile_files/desain2.jpg">
-						<img id="portofolio" src="./Profile_files/desain4.jpg">
+				  	<img id="portofolio" src="<?= base_url('res/postingan/'), $postingan['id'],'.jpg'; ?>">
+						<img id="portofolio" src="<?= base_url('res'); ?>/desain6.jpg">
+						<img id="portofolio" src="<?= base_url('res'); ?>/desain5.jpg">
+						<img id="portofolio" src="<?= base_url('res'); ?>/desain9.jpg">
+						<img id="portofolio" src="<?= base_url('res'); ?>/desain8.jpg">
+						<img id="portofolio" src="<?= base_url('res'); ?>/desain7.jpg">
+						<img id="portofolio" src="<?= base_url('res'); ?>/desain1.jpg">
+						<img id="portofolio" src="<?= base_url('res'); ?>/desain2.jpg">
+						<img id="portofolio" src="<?= base_url('res'); ?>/desain4.jpg">
 					</div>
 				</div>
 			</div>

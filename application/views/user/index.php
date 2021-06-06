@@ -195,8 +195,10 @@
         <a href="<?= base_url('user/profile '); ?>">
         <img id="rata1" src="res/profile/<?= $user['foto']?>" style="width:20px ; height:20px; float:right;">	
         <a>			
-				<img id="rata1" src="res/notifikasi1.png" style="width:20px ; height:20px; float:right;">				
+				<img id="rata1" src="res/notifikasi1.png" style="width:20px ; height:20px; float:right;">
+				<a href="<?= base_url('user/index'); ?>">				
 				<img id="rata1" src="res/home4.png" style="width:20px ; height:20px; float:right;">
+				<a>
 				
 				<!--box status-->
 				<div id="status" style="width:900px; margin: auto; margin-top:20px;background-color: white; min-height: 125px;">
