@@ -221,13 +221,15 @@
 						<?php 
 							$akun1 = $this->db->get_where('user', ['username' => $postingan[$jumlah-1]['username']])->row_array(); ?>
 							<div id="story" style="width:460px;height: 600px; margin: left; margin-left: 0px; margin-top:20px;background-color: white; min-height: 400px;">
-						<div>
-							<img id="img_story" src="<?= base_url('res/profile/'), $akun1['foto']; ?>">	
-						</div>
+								<div>
+									<a href="<?= base_url('user/akun_orang?username='),$akun1['username']; ?>">
+									<img id="img_story" src="<?= base_url('res/profile/'), $akun1['foto']; ?>">	
+									<a>
+								</div>
 
-						<div id="nametag" style="font-weight: bold;color: #C13301;">
-							<?= $akun1['username']; ?>
-							</div>
+								<div id="nametag" style="font-weight: bold;color: #C13301;">
+									<?= $akun1['username']; ?>
+								</div>
 							
 							<!-- box ujung segitiga -->
 						<!--  
@@ -236,30 +238,32 @@
 							<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Grafis
 							</p>
 							</div>-->
-							<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-1]['foto']; ?>">
-							<a> 
-							<img id="icon" src="res/like.png">
-							</a>
-							<a>
-							<img id="icon1" src="res/share.png">
-							</a>
-						<a>
-						<img id="icon1" src="res/download.png">
-						</a>
-						<input type="text" id="komentar" placeholder="	tambah komentar">
-						</div>
+								<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-1]['foto']; ?>">
+								<a> 
+									<img id="icon" src="res/like.png">
+								</a>
+								<a>
+									<img id="icon1" src="res/share.png">
+								</a>
+								<a>
+									<img id="icon1" src="res/download.png">
+								</a>
+								<input type="text" id="komentar" placeholder="	tambah komentar">
+							</div>
 						
 					
 						<?php if($jumlah-2>=0){
-						$akun2 = $this->db->get_where('user', ['username' => $postingan[$jumlah-2]['username']])->row_array(); ?>
+											$akun2 = $this->db->get_where('user', ['username' => $postingan[$jumlah-2]['username']])->row_array(); ?>
 						
-						<div id="story" style="width:460px;height: 600px; margin:right; margin-top:20px; margin-left: 20px; background-color: white; min-height: 400px;">
-						<div>
-					<img id="img_story" src="<?= base_url('res/profile/'), $akun2['foto']; ?>">	
-					</div>
-					<div id="nametag" style="font-weight: bold;color: #C13301;">
-					<?= $akun2['username']; ?>
-					</div>
+											<div id="story" style="width:460px;height: 600px; margin:right; margin-top:20px; margin-left: 20px; background-color: white; min-height: 400px;">
+												<div>
+													<a href="<?= base_url('user/akun_orang?username='),$akun2['username']; ?>">
+														<img id="img_story" src="<?= base_url('res/profile/'), $akun2['foto']; ?>">	
+													<a>
+												</div>
+												<div id="nametag" style="font-weight: bold;color: #C13301;">
+													<?= $akun2['username']; ?>
+												</div>
 					
 					<!-- box ujung segitiga -->
 					<!-- <div id="segitiga1"></div>
@@ -267,25 +271,25 @@
 					<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Busana
 					</p>
 					</div>-->
-					<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-2]['foto']; ?>">
-					<a> 
-					<img id="icon" src="res/like.png">
-							</a>
-							<a>
-							<img id="icon1" src="res/share.png">
-							</a>
-						<a>
-						<img id="icon1" src="res/download.png">
-						</a>
-						<input type="text" id="komentar" placeholder="	tambah komentar">
-					</div>
-				<?php  }?> 
+												<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-2]['foto']; ?>">
+												<a> 
+													<img id="icon" src="res/like.png">
+												</a>
+												<a>
+													<img id="icon1" src="res/share.png">
+												</a>
+												<a>
+													<img id="icon1" src="res/download.png">
+												</a>
+												<input type="text" id="komentar" placeholder="	tambah komentar">
+											</div>
+							<?php  }?> 
 					
-					<?php $jumlah = $jumlah - 2; ?>
+						<?php $jumlah = $jumlah - 2; ?>
 					
 							
-				</div>				
-					<?php endfor; ?>
+					</div>				
+				<?php endfor; ?>
 
 
 

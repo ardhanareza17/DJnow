@@ -36,6 +36,25 @@ class User extends CI_Controller
     $this->load->view('user/profile', $data);
     //print_r($data);
   }
+  
+  
+  public function akun_orang()
+  {
+    $username = $_GET['username'];
+    if($username == $this->session->userdata('username') ){
+      redirect('User/profile');
+    } else {
+      $data['title'] = 'Profile';
+      $data['aku'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+      //ambil data user dari db
+      $data['user'] = $this->db->get_where('user', ['username' => $username])->row_array();
+    
+    $data['postingan'] = $this->db->get_where('postingan', ['username' =>  $username])->result_array();
+    //ini nanti diisi sama tampilan fix homepage, di awah ini cuma ngetes doang
+    $this->load->view('user/akun_orang', $data);
+    //print_r($data);
+    }
+  }
 
   
   public function edit()
