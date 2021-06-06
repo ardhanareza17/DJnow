@@ -22,9 +22,10 @@ class User extends CI_Controller
     //ambil data user dari db
     $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     
-    $data['postingan'] = $this->db->get_where('postingan', ['username' => $this->session->userdata('username')])->row_array();
+    $data['postingan'] = $this->db->get_where('postingan', ['username' => $this->session->userdata('username')])->result_array();
     //ini nanti diisi sama tampilan fix homepage, di awah ini cuma ngetes doang
     $this->load->view('user/profile', $data);
+    //print_r($data);
   }
 
   
@@ -36,7 +37,7 @@ class User extends CI_Controller
     //ini nanti diisi sama tampilan fix homepage, di awah ini cuma ngetes doang
     $this->load->view('user/edit', $data);
   }
-  }
+  
 
 
 }

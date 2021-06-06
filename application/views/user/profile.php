@@ -133,15 +133,10 @@
 					
 					<!-- PORTOFOLIO	-->
 					<div id="story" style="width:460px;height: 530px; margin: left; margin-left: 5px; margin-top:16px;background-color:#FFE5B4; min-height: 400px;">
-				  	<img id="portofolio" src="<?= base_url('res/postingan/'), $postingan['id'],'.jpg'; ?>">
-						<img id="portofolio" src="<?= base_url('res'); ?>/desain6.jpg">
-						<img id="portofolio" src="<?= base_url('res'); ?>/desain5.jpg">
-						<img id="portofolio" src="<?= base_url('res'); ?>/desain9.jpg">
-						<img id="portofolio" src="<?= base_url('res'); ?>/desain8.jpg">
-						<img id="portofolio" src="<?= base_url('res'); ?>/desain7.jpg">
-						<img id="portofolio" src="<?= base_url('res'); ?>/desain1.jpg">
-						<img id="portofolio" src="<?= base_url('res'); ?>/desain2.jpg">
-						<img id="portofolio" src="<?= base_url('res'); ?>/desain4.jpg">
+					<?php $jumlah = count($postingan); ?>
+					<?php for ($x = 0; $x < $jumlah ; $x++) : ?>
+				  	<img id="portofolio" src="<?= base_url('res/postingan/'), $postingan[$x]['id'],'.jpg'; ?>">
+					<?php endfor; ?>
 					</div>
 				</div>
 			</div>
