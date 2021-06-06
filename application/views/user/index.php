@@ -196,78 +196,101 @@
         <img id="rata1" src="res/profile/<?= $user['foto']?>" style="width:20px ; height:20px; float:right;">	
         <a>			
 				<img id="rata1" src="res/notifikasi1.png" style="width:20px ; height:20px; float:right;">
-				<a href="<?= base_url('user/index'); ?>">				
+				<a href="<?= base_url('User'); ?>">				
 				<img id="rata1" src="res/home4.png" style="width:20px ; height:20px; float:right;">
 				<a>
 				
 				<!--box status-->
 				<div id="status" style="width:900px; margin: auto; margin-top:20px;background-color: white; min-height: 125px;">
+					<form action="<?= base_url('User/upload'); ?>" method="" enctype="multipart/form-data">
 						<img id="profile_pic" src="res/profile/<?= $user['foto']?>">
-						&nbsp; <input type="img/text" id="upload_img" placeholder="upload desain anda disini">						
-							<select id="option">
-								<option>Pilih Kategori</option>
-							</select>	
-							<button id="button1"> Ajukan verifikasi upload </button>
+						&nbsp; 
+						<input type="file" id="upload_img" name="upload_img" label="Pilih Gambar" placeholder="upload desain anda disini">		
+						<select id="option">
+							<option>Pilih Kategori</option>
+						</select>	
+						<button type="submit" id="button1"> Upload </button>
+					</form>				
 				</div>
 
 				<!--timeline story desain-->
-				<div style="display: flex;">
-					<div id="story" style="width:460px;height: 600px; margin: left; margin-left: 0px; margin-top:20px;background-color: white; min-height: 400px;">
+				<?php $jumlah = count($postingan); ?>
+				<?php for ($x = ($jumlah+$jumlah%2)/2 - 1; $x >= 0 ; $x--) : ?>
+
+					<div style="display: flex;">
+						<?php 
+							$akun1 = $this->db->get_where('user', ['username' => $postingan[$jumlah-1]['username']])->row_array(); ?>
+							<div id="story" style="width:460px;height: 600px; margin: left; margin-left: 0px; margin-top:20px;background-color: white; min-height: 400px;">
 						<div>
-							<img id="img_story" src="res/me.jpg">	
+							<img id="img_story" src="<?= base_url('res/profile/'), $akun1['foto']; ?>">	
 						</div>
 
 						<div id="nametag" style="font-weight: bold;color: #C13301;">
-							Ronsu
-						</div>
-
-						<!-- box ujung segitiga -->
-						<div id="segitiga"></div>
-						<div id="persegi">
+							<?= $akun1['username']; ?>
+							</div>
+							
+							<!-- box ujung segitiga -->
+							<div id="segitiga"></div>
+							<div id="persegi">
 							<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Grafis
 							</p>
-						</div>
-						<img id="img_feed" src="res/rumah.png">
-						<a> 
+							</div>
+							<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-1]['id'],'.jpg'; ?>">
+							<a> 
 							<img id="icon" src="res/like.png">
-						</a>
-						<a>
+							</a>
+							<a>
 							<img id="icon1" src="res/share.png">
-						</a>
+							</a>
 						<a>
-							<img id="icon1" src="res/download.png">
+						<img id="icon1" src="res/download.png">
 						</a>
 						<input type="text" id="komentar" placeholder="	tambah komentar">
-					</div>
-
-					<div id="story" style="width:460px;height: 600px; margin:right; margin-top:20px; margin-left: 20px; background-color: white; min-height: 400px;">
+						</div>
+						
+					
+						<?php if($jumlah-2>=0){
+						$akun2 = $this->db->get_where('user', ['username' => $postingan[$jumlah-2]['username']])->row_array(); ?>
+						
+						<div id="story" style="width:460px;height: 600px; margin:right; margin-top:20px; margin-left: 20px; background-color: white; min-height: 400px;">
 						<div>
-							<img id="img_story" src="res/aku.jpg">	
-						</div>
-						<div id="nametag" style="font-weight: bold;color: #C13301;">
-							Roni
-						</div>
-
-						<!-- box ujung segitiga -->
-						<div id="segitiga1"></div>
-						<div id="persegi1">
-							<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Busana
-							</p>
-						</div>
-						<img id="img_feed" src="res/busana.jpg">
-						<a> 
-							<img id="icon" src="res/like.png">
-						</a>
-						<a>
-							<img id="icon1" src="res/share.png">
-						</a>
-						<a>
-							<img id="icon1" src="res/download.png">
-						</a>
-						<input type="text" id="komentar" placeholder="	tambah komentar"> 
-					</div>					
+					<img id="img_story" src="<?= base_url('res/profile/'), $akun2['foto']; ?>">	
+					</div>
+					<div id="nametag" style="font-weight: bold;color: #C13301;">
+					<?= $akun2['username']; ?>
+					</div>
+					
+					<!-- box ujung segitiga -->
+					<div id="segitiga1"></div>
+					<div id="persegi1">
+					<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Busana
+					</p>
+					</div>
+					<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-2]['id'],'.jpg'; ?>">
+					<a> 
+					<img id="icon" src="./Home_files/like.png">
+					</a>
+					<a>
+					<img id="icon1" src="./Home_files/share.png">
+					</a>
+					<a>
+					<img id="icon1" src="./Home_files/download.png">
+					</a>
+					<input type="text" id="komentar" placeholder="	tambah komentar"> 
+					</div>
+				<?php  }?> 
+					
+					<?php $jumlah = $jumlah - 2; ?>
+					
+							
 				</div>				
+					<?php endfor; ?>
+
+
+
+					
 			</div>
 		</div>
 	</body>
-</html>
+	</html>
+	
