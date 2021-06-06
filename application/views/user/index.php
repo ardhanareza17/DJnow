@@ -230,11 +230,12 @@
 							</div>
 							
 							<!-- box ujung segitiga -->
+						<!--  
 							<div id="segitiga"></div>
 							<div id="persegi">
 							<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Grafis
 							</p>
-							</div>
+							</div>-->
 							<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-1]['id'],'.jpg'; ?>">
 							<a> 
 							<img id="icon" src="res/like.png">
@@ -261,22 +262,22 @@
 					</div>
 					
 					<!-- box ujung segitiga -->
-					<div id="segitiga1"></div>
+					<!-- <div id="segitiga1"></div>
 					<div id="persegi1">
 					<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Busana
 					</p>
-					</div>
+					</div>-->
 					<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-2]['id'],'.jpg'; ?>">
 					<a> 
-					<img id="icon" src="./Home_files/like.png">
-					</a>
-					<a>
-					<img id="icon1" src="./Home_files/share.png">
-					</a>
-					<a>
-					<img id="icon1" src="./Home_files/download.png">
-					</a>
-					<input type="text" id="komentar" placeholder="	tambah komentar"> 
+					<img id="icon" src="res/like.png">
+							</a>
+							<a>
+							<img id="icon1" src="res/share.png">
+							</a>
+						<a>
+						<img id="icon1" src="res/download.png">
+						</a>
+						<input type="text" id="komentar" placeholder="	tambah komentar">
 					</div>
 				<?php  }?> 
 					
