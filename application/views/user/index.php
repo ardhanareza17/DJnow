@@ -236,7 +236,7 @@
 							<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Grafis
 							</p>
 							</div>-->
-							<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-1]['id'],'.jpg'; ?>">
+							<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-1]['foto']; ?>">
 							<a> 
 							<img id="icon" src="res/like.png">
 							</a>
@@ -267,7 +267,7 @@
 					<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Busana
 					</p>
 					</div>-->
-					<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-2]['id'],'.jpg'; ?>">
+					<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-2]['foto']; ?>">
 					<a> 
 					<img id="icon" src="res/like.png">
 							</a>
