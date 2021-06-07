@@ -99,22 +99,27 @@
 				<a href="<?= base_url('user/profile '); ?>">
 				<img id="rata1" src="<?= base_url('res'); ?>/profile/<?= $user['foto']?>" style="width:20px ; height:20px; float:right;">
 				<a>
-				<img id="rata1" src="<?= base_url('res'); ?>/notifikasi1.png" style="width:20px ; height:20px; float:right;">
-				<a href="<?= base_url('User'); ?>">
-				<img id="rata1" src="<?= base_url('res'); ?>/home4.png" style="width:20px ; height:20px; float:right;">
-				<a>
+					<img id="rata1" src="<?= base_url('res'); ?>/notifikasi1.png" style="width:20px ; height:20px; float:right;">
+					<a href="<?= base_url('User'); ?>">
+						<img id="rata1" src="<?= base_url('res'); ?>/home4.png" style="width:20px ; height:20px; float:right;">
+						<a>
+							
 
-				<!--bio profile-->
-				<div style="display: flex;">
-					<div id="story" style="width:460px;height: 530px; margin: left; margin-left: -5px; margin-top:20px;background-color: #FDFAE6; min-height: 400px;">
-						<div>
-							<img id="img_story" src="<?= base_url('res'); ?>/profile/<?= $user['foto']?>">	
-						</div>
-						<div id="nametag" style="text-align: center; font-weight: bold;color: #C13301;">
-							<?= '@', $user['username']; ?>
-						</div>
-						<br>
-						
+							
+							<!--bio profile-->
+							<div style="display: flex;">
+								<div id="story" style="width:460px;height: 530px; margin: left; margin-left: -5px; margin-top:20px;background-color: #FDFAE6; min-height: 400px;">
+									<div>
+										<img id="img_story" src="<?= base_url('res'); ?>/profile/<?= $user['foto']?>">	
+									</div>
+									<div id="nametag" style="text-align: center; font-weight: bold;color: #C13301;">
+										<?= '@', $user['username']; ?>
+									</div>
+									<div id="name" style="text-align: center; font-weight: bold;color: black;">
+										<?=  $user['nama_lengkap']; ?>
+									</div>
+									<br>
+																			
 						<p style="text-align: center;font-size: 18px; font-weight: bold; color: black;">
               <?= $user['user_bio']; ?>
 							Kumpulan foto disamping merupakan hasil 
@@ -122,13 +127,15 @@
 						</p> 
 						<p style="text-align: center;font-size: 18px; font-weight: bold; color: black;">
 							Kalau tertarik dengan karya desainku, kalian bisa hubungi aku di :
-
+							
               <?= $user['kontak']; ?> atau
 							<?= $user['email']; ?>
 						</p> 
-						<button id="button0" style="color:white;">
-							Edit Profile
-						</button>
+						<a href="<?= base_url('user/edit '); ?>">
+							<button id="button0" style="color:white;">
+								Edit Profile
+							</button>
+						<a>
 					</div>
 					
 					<!-- PORTOFOLIO	-->
