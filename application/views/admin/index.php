@@ -1,271 +1,181 @@
-<!DOCTYPE html>
-<!-- saved from url=(0031)http://localhost/DJnow/home.php -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Home | DJNow</title>
-	<style type="text/css">
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <title>DJNOW (Design Jaman Now)</title>
+        <style type="text/css">
+            body {padding-top: 70px; background: #FFE5B4 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+        </style>
+    </head>
+
+    <body>
+      <!-- INI NAVBAR -->
+        <nav class="navbar fixed-top navbar-light shadow bottom" style="border-radius: 0px; box-shadow: 0px 5px 7px 0px rgb(70, 70, 70) !important; background-color: #F2994A; height: 68px;">
+          <div class="container-fluid" style="margin-left: 216px;">
+            <div class="row">
+              <div class="col" style="width:950px;">
+                <a href="#">
+                  <img src="res/logo.png" alt="DJNOW (Design Jaman Now)" width="95px" height="46px">
+                </a>
+              </div>
+              <div class="col-4 text-end my-auto" style="width:auto; margin-right: 217px; ">
+                <a href="<?= base_url('auth/logout'); ?>">
+                  <img src="res/out.png" alt="DJNOW (Design Jaman Now)" width="30px" height="30px">
+                </a>
+              </div>
+            </div>
+        </nav>
+
+        <div class="main-wrapper">
+            <!--KONTEN PANEL KIRI-->
+            <div class="section left col-sm-3" style="background-color: #C13301; max-width: 346px !important;">
+                <div class="half" style="margin: 0px;">
+                    <div class="row">
+                        <div class="col" style="max-width: 96px; background-color: #D03903 !important;">
+                          <img src="res/adminlogo.png" width="51px" height="51px" style="margin-bottom: 15px; margin-top: 31px; margin-left: 19px;">
+                        </div>
+                        <div class="col" style="max-width: auto !important; background-color: #D03903 !important;">
+                          <div style="font-size: 16px; font-weight: 500; color: #FFE5B4; margin-top: 45px; margin-left: -15px !important;">
+														<?= $admin['nama_lengkap']; ?>
+                          </div>
+                        </div>
+                    </div>
 	
-			#orange_bar{
+                    	<div class="row" style="margin-left: -15px !important; margin-right: -15px;">
+												<div class="col"  style="max-width:96px; height: 64px; background-color: #F2994A;">
+                          <img src="res/dashboard_active.png" width="36px" height="36px" style="margin-top:14px; margin-left: 33px;">
+												</div>
+                        <div class="col"  style="text-decoration: none; height: 64px; background-color: #F2994A;">
+                          <div style="color: #FDFAE6 !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black; font-size: 16px; margin-left: -12px; margin-top: 20px;">
+                            Dashboard
+                          </div>
+                        </div>
+											</div>
+					
+                    <div class="row" style="margin-left: -15px !important; margin-right: -15px;">
+                        <a class="col" type="button" href="<?= base_url('Admin/tabel_pengguna'); ?>" style="max-width:96px; height: 64px; background-color: #C13301;">
+                          <img src="res/pengguna.png" width="36px" height="36px" style="margin-top:14px; margin-left: 33px;">
+                        </a>
+                        <a class="col" type="button" href="<?= base_url('Admin/tabel_pengguna'); ?>" style="text-decoration: none; height: 64px; background-color: #C13301;">
+                          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black; font-size: 16px; margin-left: -12px; margin-top: 20px;">
+                            Tabel Data Pengguna
+                          </div>
+                        </a>
+										</div>
+                    <div class="row" style="margin-left: -15px !important; margin-right: -15px;">
+                        <a class="col" type="button" href="<?= base_url('Admin/tabel_unggahan'); ?>" style="max-width:96px; height: 64px; background-color: #C13301;">
+                          <img src="res/unggahan.png" width="36px" height="36px" style="margin-top:14px; margin-left: 33px;">
+                        </a>
+                        <a class="col" type="button" href="<?= base_url('Admin/tabel_unggahan'); ?>" style="text-decoration: none; height: 64px; background-color: #C13301;">
+                          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black; font-size: 16px; margin-left: -12px; margin-top: 20px;">
+                            Tabel Data Unggahan
+                          </div>
+                        </a>
+                    </div>
+                    <div class="row" style="margin-left: -15px !important; margin-right: -15px;">
+                        <a class="col" type="button" href="<?= base_url('Admin/kategori'); ?>" style="max-width:96px; height: 64px; background-color: #C13301;">
+                          <img src="res/kategori.png" width="36px" height="36px" style="margin-top:14px; margin-left: 33px;">
+                        </a>
+                        <a class="col" type="button" href="<?= base_url('Admin/kategori'); ?>" style="text-decoration: none; height: 64px; background-color: #C13301;">
+                          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black; font-size: 16px; margin-left: -12px; margin-top: 20px;">
+                            Kategori
+                          </div>
+                        </a>
+                    </div>
+                    <div class="row" style=" background-color:#C13301 ;"></div>
+                </div>
+            </div>
+            <!--CLOSE KONTEN PANEL KIRI-->
 
-			height: 50px;
-			background-color: #F2994A;
-			color: #FFE5B4;
-			}
-			#search_box{
-				width: 690px;
-				height: 23px;
-				border-radius: 15px; 
-				border:none;
-				padding: 4px;
-				font-size: 14px;
-				text-align: center; 
-				background-image: url(res/cari.png);
-				background-repeat: no-repeat;
-				background-position: right;
-				background-size: 15px;
-			} 
-
-			#rata{
-				margin-top: 10px;
-				margin-bottom: -10px;
-			}
-		
-			#rata1{
-				margin-top: 15px;
-				margin-bottom: -10px;
-				margin-left: 10px;
-				color: red;
-			}
-
-			#status{
-				border-radius: 15px; 
-				border:none;
-				padding: 4px;
-			}
-
-			#profile_pic{
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-				margin-left: 30px;
-				margin-top: 60px;
-				margin-bottom: -30px;
-				border:none;
-				padding: 4px;
-			}
-
-			#upload_img{
-				width: 550px;
-				height: 150px;
-				margin-bottom: 10px;
-				margin-top: 10px;
-				text-align: center;
-				background-color: #E0DFD5;
-				border:none;
-				padding: 4px;
-			}
-
-			#option{
-				width: 200px;
-				height: 40px;
-				background-color: #F2994A;
-				float: right;
-				margin-top: 40px;
-				margin-right: 20px;
-			}
-
-			#button1{
-				width: 200px;
-				height: 40px;
-				background-color: #C13301 ;
-				float: right;
-				margin-top: -85px;
-				margin-right: 20px;
-			}
-
-			#story{
-				border-radius: 15px; 
-				border:none;
-				padding: 4px;
-			}
-
-			#img_story{
-				width: 40px;
-				height: 40px;
-				border-radius: 50% ;
-				margin-left: 10px;
-				margin-top: 5px;
-				margin-bottom: -30px;
-				border:none;
-				padding: 4px;
-			}
-			#nametag{
-				margin-left:  60px;
-				margin-top: -10px;
-				font-size: 16px;
-			}
-
-			#img_feed{
-				width: 435px;
-				height: 435px;
-				margin-top: 15px;
-			}
-
-			#icon{
-				margin-top: 3px;
-				margin-bottom: -3px;
-				margin-left: 10px;
-				lighting-color: #C13301;
-				height:25px ; 
-				width: 25px ;
-			}
-
-			#icon1{
-				float: right;
-				margin-top: 3px;
-				margin-bottom: -3px;
-				margin-right: 20px;
-				lighting-color: #C13301;
-				height:25px ; 
-				width: 25px ;
-			}
-
-			#komentar{
-				width: 400px;
-				height: 26px;
-				margin-left: 10px ; 
-				background-color: #E0DFD5;
-				border:none;
-				padding: 4px;
-				border-radius: 9px;
-				background-image: url(res/send1.png);
-				background-repeat: no-repeat;
-				background-position: right;
-				background-size: 25px;
-			}
-
-			#persegi {
-   				height: 35px;
-   				width: 100px;  			
-   				background: #FFD300;
-				float: right;
-				margin-top: -30px;
-			}		
-			
-			#segitiga{
-				height:0px;
-				width:0px;
-				border-left:solid 17.5px #FFD300;
-				border-top:solid 17.5px transparent;
-				border-bottom:solid 17.5px transparent;
-				float: right;
-				margin-top: -30px;
-				margin-right: 20px;
-			}
-
-			#persegi1 {
-	   			height: 35px;
-	   			width: 100px;  			
-   				background: #EFDB82;
-				float: right;
-				margin-top: -30px;
-			}		
-			
-			#segitiga1{
-				height:0px;
-				width:0px;
-				border-left:solid 17.5px #EFDB82;
-				border-top:solid 17.5px transparent;
-				border-bottom:solid 17.5px transparent;
-				float: right;
-				margin-top: -30px;
-				margin-right: 20px;
-			}
-			
-	</style></head>
-	
-	<body style="font-family: calibri; background-color: #FFE5B4;">
-		<!-- top bar-->
-		<div id="orange_bar">
-			<div style="width: 900px; margin:auto;font-size: 30px">
-				<img id="rata" src="<?= base_url('assets'); ?>/res/logo.png" width="60" height="30">
-        &nbsp;<input type="text" id="search_box" placeholder="Cari di DJNow">
-        <a href="<?= base_url('auth/logout'); ?>">
-        <img id="rata1" src="res/logout2.png" style="width:20px ; height:20px; float:right;">
-        <a>		
-        <a href="<?= base_url('user/profile '); ?>">
-        <img id="rata1" src="res/profile/<?= $user['foto']?>" style="width:20px ; height:20px; float:right;">	
-        <a>			
-				<img id="rata1" src="res/notifikasi1.png" style="width:20px ; height:20px; float:right;">				
-				<img id="rata1" src="res/home4.png" style="width:20px ; height:20px; float:right;">
-				
-				<!--box status-->
-				<div id="status" style="width:900px; margin: auto; margin-top:20px;background-color: white; min-height: 125px;">
-						<img id="profile_pic" src="res/profile/<?= $user['foto']?>">
-						&nbsp; <input type="img/text" id="upload_img" placeholder="upload desain anda disini">						
-							<select id="option">
-								<option>Pilih Kategori</option>
-							</select>	
-							<button id="button1"> Ajukan verifikasi upload </button>
-				</div>
-
-				<!--timeline story desain-->
-				<div style="display: flex;">
-					<div id="story" style="width:460px;height: 600px; margin: left; margin-left: 0px; margin-top:20px;background-color: white; min-height: 400px;">
-						<div>
-							<img id="img_story" src="res/me.jpg">	
-						</div>
-
-						<div id="nametag" style="font-weight: bold;color: #C13301;">
-							Ronsu
-						</div>
-
-						<!-- box ujung segitiga -->
-						<div id="segitiga"></div>
-						<div id="persegi">
-							<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Grafis
-							</p>
-						</div>
-						<img id="img_feed" src="res/rumah.png">
-						<a> 
-							<img id="icon" src="res/like.png">
-						</a>
-						<a>
-							<img id="icon1" src="res/share.png">
-						</a>
-						<a>
-							<img id="icon1" src="res/download.png">
-						</a>
-						<input type="text" id="komentar" placeholder="	tambah komentar">
-					</div>
-
-					<div id="story" style="width:460px;height: 600px; margin:right; margin-top:20px; margin-left: 20px; background-color: white; min-height: 400px;">
-						<div>
-							<img id="img_story" src="res/aku.jpg">	
-						</div>
-						<div id="nametag" style="font-weight: bold;color: #C13301;">
-							Roni
-						</div>
-
-						<!-- box ujung segitiga -->
-						<div id="segitiga1"></div>
-						<div id="persegi1">
-							<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Busana
-							</p>
-						</div>
-						<img id="img_feed" src="res/busana.jpg">
-						<a> 
-							<img id="icon" src="res/like.png">
-						</a>
-						<a>
-							<img id="icon1" src="res/share.png">
-						</a>
-						<a>
-							<img id="icon1" src="res/download.png">
-						</a>
-						<input type="text" id="komentar" placeholder="	tambah komentar"> 
-					</div>					
-				</div>				
-			</div>
-		</div>
-	</body>
+            <!--KONTEN PANEL KANAN-->
+            <div class="section1 right col-xs-9">
+                <div class="row" style="margin-right: 0px; margin-left: 7px; margin-top: 50px; font-size: 16px;">
+                    <div class="container" style="width: 300px;">
+                        <a href="<?= base_url('Admin/tabel_pengguna'); ?>" style="color: black; text-decoration: none;">
+                            <div class="col" style="border-radius: 8px; background-color: #55B853;">
+                                <div class="row">
+                                    <div class="col align-self-center position-absolute">
+                                        <div class="row" style="font-weight: 700; margin-left: 20px; font-size: 37px;">
+																						<?php $jml_akun=count($user); ?>
+																						<?= $jml_akun; ?>
+                                        </div>
+                                        <div class="row" style="font-weight: 400; margin-bottom:5px; font-size: 15px; margin-left: 20px;">
+                                            Pengguna Terdaftar
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <img style="margin-bottom: 5px; margin-right: 20px; margin-top: 15px;" src="res/user_registered.png" width="65px" height="95px">
+                                    </div>
+                                </div>
+                                <div class="row" style="border-radius: 8px; margin:auto; background-color: white; opacity: 0.3;">
+                                    <div class="col text-center">
+                                        Selengkapnya
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="container" style="width: 300px;">
+                        <a href="<?= base_url('Admin/tabel_unggahan'); ?>" style=" color: black; text-decoration: none;">
+                            <div class="col" style="border-radius: 8px; background-color: #F62E2E;">
+                                <div class="row">
+                                    <div class="col align-self-center position-absolute">
+                                        <div class="row" style="font-weight: 700; margin-left: 20px; font-size: 37px;">
+																					<?php $jml_postingan=count($postingan); ?>
+																					<?= $jml_postingan; ?>
+                                        </div>
+                                        <div class="row" style="font-weight: 400; margin-bottom:5px; font-size: 15px; margin-left: 20px;">
+                                            Unggahan
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <img style="opacity: 0.4; margin-bottom: 5px; margin-right: 20px; margin-top: 43px;" src="res/up.png" width="88px" height="67px">
+                                    </div>
+                                </div>
+                                <div class="row" style="border-radius: 8px; margin:auto; background-color: white; opacity: 0.3;">
+                                    <div class="col text-center">
+                                        Selengkapnya
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="container" style="width: 300px;">
+                        <a href="<?= base_url('Admin/kategori'); ?>" style=" color: black; text-decoration: none;">
+                            <div class="col" style="border-radius: 8px; background-color: #787EB4;">
+                                <div class="row">
+                                    <div class="col align-self-center position-absolute">
+                                        <div class="row" style="font-weight: 700; margin-left: 20px; font-size: 37px;">
+                                            3
+                                        </div>
+                                        <div class="row" style="font-weight: 400; margin-bottom:5px; font-size: 15px; margin-left: 20px;">
+                                            Kategori
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <img style="opacity: 0.4; margin-bottom: 5px; margin-right: 20px; margin-top: 15px;" src="res/kategori_panel.png" width="85px" height="95px">
+                                    </div>
+                                </div>
+                            <div class="row" style="border-radius: 8px; margin:auto; background-color: white; opacity: 0.3;">
+                                <div class="col text-center">
+                                    Selengkapnya
+                                </div>
+                            </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>  
+            <!--CLOSE KONTEN PANEL KANAN-->
+        </div>
+    </body>
+    <!-- JANGAN DIUBAH-UBAH -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </html>

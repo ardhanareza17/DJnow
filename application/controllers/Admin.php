@@ -6,18 +6,60 @@ class Admin extends CI_Controller
 
   public function index() 
   {
+    $data['title'] = 'Dashboard';
     //ambil data user dari db
-    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+    $data['admin'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+    //$data['user'] = $this->db->get_where('user', ['username !=',  $this->session->userdata('username')])->result_array();
+    $data['user'] = $this->db->query("SELECT * FROM user")->result_array();
+    $data['postingan'] = $this->db->query("SELECT * FROM postingan")->result_array();
+    $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
     //ini nanti diisi sama tampilan fix homepage, di awah ini cuma ngetes doang
     $this->load->view('admin/index', $data);
+    //ini nanti diisi sama tampilan fix homepage, di awah ini cuma ngetes doang
+    //print_r($data['user']);
   }
 
 
 
-  public function profile()
+  public function tabel_pengguna()
   {
-    $this->load->view('admin/profile');
+    $data['title'] = 'Data Pengguna';
+    //ambil data user dari db
+    $data['admin'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+    //$data['user'] = $this->db->get_where('user', ['username !=',  $this->session->userdata('username')])->result_array();
+    $data['user'] = $this->db->query("SELECT * FROM user")->result_array();
+    $data['postingan'] = $this->db->query("SELECT * FROM postingan")->result_array();
+    $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
+    $this->load->view('admin/tabel_pengguna', $data);
   }
+  
+
+  public function tabel_unggahan()
+  {
+    $data['title'] = 'Data Unggahan';
+    //ambil data user dari db
+    $data['admin'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+    //$data['user'] = $this->db->get_where('user', ['username !=',  $this->session->userdata('username')])->result_array();
+    $data['user'] = $this->db->query("SELECT * FROM user")->result_array();
+    $data['postingan'] = $this->db->query("SELECT * FROM postingan")->result_array();
+    $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
+    $this->load->view('admin/tabel_unggahan', $data);
+  }
+  
+
+
+  public function kategori()
+  {
+    $data['title'] = 'Kategori';
+    //ambil data user dari db
+    $data['admin'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+    //$data['user'] = $this->db->get_where('user', ['username !=',  $this->session->userdata('username')])->result_array();
+    $data['user'] = $this->db->query("SELECT * FROM user")->result_array();
+    $data['postingan'] = $this->db->query("SELECT * FROM postingan")->result_array();
+    $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
+    $this->load->view('admin/kategori', $data);
+  }
+
 
   
 }
