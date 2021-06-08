@@ -40,6 +40,7 @@ class User extends CI_Controller
   
   public function akun_orang()
   {
+    $username = $_GET['username'];
     $data['title'] = 'Profile';
     $data['aku'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     //ambil data user dari db
@@ -47,7 +48,6 @@ class User extends CI_Controller
     
     $data['postingan'] = $this->db->get_where('postingan', ['username' =>  $username])->result_array();
   
-    $username = $_GET['username'];
     if($username == $this->session->userdata('username') ){
       redirect('User/profile');
     } else {
