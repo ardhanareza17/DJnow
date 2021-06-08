@@ -113,6 +113,9 @@
 						<div id="nametag" style="text-align: center; font-weight: bold;color: #C13301;">
 							<?= '@', $user['username']; ?>
 						</div>
+						<div id="name" style="text-align: center; font-weight: bold;color: black;">
+								<?=  $user['nama_lengkap']; ?>
+						</div>
 						<br>
 						
 						<p style="text-align: center;font-size: 18px; font-weight: bold; color: black;">
@@ -132,7 +135,10 @@
 					<div id="story" style="width:460px;height: 530px; margin: left; margin-left: 5px; margin-top:16px;background-color:#FFE5B4; min-height: 400px;">
 					<?php $jumlah = count($postingan); ?>
 					<?php for ($x = 0; $x < $jumlah ; $x++) : ?>
-				  	<img id="portofolio" src="<?= base_url('res/postingan/'), $postingan[$x]['id'],'.jpg'; ?>">
+						<?php $id = $postingan[$x]['id'] ?>
+						<a href="<?= base_url('User/postingan?postingan='), $id, '&page=/akun_orang&username=',$user['username']; ?>">
+							<img id="portofolio" src="<?= base_url('res/postingan/'), $postingan[$x]['id'],'.jpg'; ?>">
+						<a>
 					<?php endfor; ?>
 					</div>
 				</div>

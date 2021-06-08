@@ -55,9 +55,9 @@
 
 			#upload_img{
 				width: 550px;
-				height: 150px;
-				margin-bottom: 10px;
-				margin-top: 10px;
+				height: 40px;
+				margin-bottom: 120px;
+				margin-top: -80px;
 				text-align: center;
 				background-color: #E0DFD5;
 				border:none;
@@ -201,15 +201,17 @@
 				<a>
 				
 				<!--box status-->
-				<div id="status" style="width:900px; margin: auto; margin-top:20px;background-color: white; min-height: 125px;">
-					<form action="<?= base_url('User/upload'); ?>" method="" enctype="multipart/form-data">
+				<div id="status" style="width:900px; margin: auto; margin-top:20px;background-color: white; min-height: 0px;">
+					<?php echo form_open_multipart('User/upload');?>
 						<img id="profile_pic" src="res/profile/<?= $user['foto']?>">
 						&nbsp; 
 						<input type="file" id="upload_img" name="upload_img" label="Pilih Gambar" placeholder="upload desain anda disini">		
-						<select id="option">
+						<!--<select id="option">
 							<option>Pilih Kategori</option>
-						</select>	
-						<button type="submit" id="button1"> Upload </button>
+						</select>	-->
+						<div style="margin-top:-80px">
+							<button type="submit" id="button1"> Upload </button>
+						</div>
 					</form>				
 				</div>
 
@@ -238,7 +240,10 @@
 							<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Grafis
 							</p>
 							</div>-->
+							<?php $id = $postingan[$jumlah-1]['id'] ?>
+							<a href="<?= base_url('User/postingan?username=0&postingan='), $id, '&page='; ?>">	
 								<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-1]['foto']; ?>">
+							<a>
 								<a> 
 									<img id="icon" src="res/like.png">
 								</a>
@@ -271,7 +276,10 @@
 					<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Busana
 					</p>
 					</div>-->
+					<?php $id = $postingan[$jumlah-2]['id'] ?>
+							<a href="<?= base_url('User/postingan?username=0&postingan='), $id, '&page='; ?>">	
 												<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-2]['foto']; ?>">
+												<a>
 												<a> 
 													<img id="icon" src="res/like.png">
 												</a>

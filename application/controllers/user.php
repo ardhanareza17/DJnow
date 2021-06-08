@@ -64,9 +64,9 @@ class User extends CI_Controller
   //ambil data user dari db
     $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
   
-    $this->form_validation->set_rules('editpassword', 'Password', 'required|trim', [
-      'required' => 'Password harus diisi!'
-    ]);
+    //$this->form_validation->set_rules('editpassword', 'Password', 'required|trim', [
+    //  'required' => 'Password harus diisi!'
+    //]);
     $this->form_validation->set_rules('editusername', 'Username', 'required|trim', [
       'required' => 'Username tidak boleh kosong!',
     ]);
@@ -142,5 +142,16 @@ class User extends CI_Controller
   }
   
 
+  public function postingan()
+  {
+    $data['username'] = $_GET['username'];
+    $data['halaman'] = $_GET['page'];
+    $postingan_id = $_GET['postingan'];
+    $data['title'] = 'Profile';
+    //ambil data user dari db
+    $data['postingan'] = $this->db->get_where('postingan', ['id' =>  $postingan_id])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $data['postingan']['username']])->row_array();
+    $this->load->view('user/postingan', $data);
+  }
 
 }

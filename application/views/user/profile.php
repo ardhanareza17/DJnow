@@ -142,7 +142,10 @@
 					<div id="story" style="width:460px;height: 530px; margin: left; margin-left: 5px; margin-top:16px;background-color:#FFE5B4; min-height: 400px;">
 					<?php $jumlah = count($postingan); ?>
 					<?php for ($x = 0; $x < $jumlah ; $x++) : ?>
-				  	<img id="portofolio" src="<?= base_url('res/postingan/'), $postingan[$x]['id'],'.jpg'; ?>">
+						<?php $id = $postingan[$x]['id'] ?>
+						<a href="<?= base_url('User/postingan?postingan='), $id, '&page=/profile&username=0'; ?>">
+				  		<img id="portofolio" src="<?= base_url('res/postingan/'), $postingan[$x]['foto']; ?>">
+						<a>
 					<?php endfor; ?>
 					</div>
 				</div>

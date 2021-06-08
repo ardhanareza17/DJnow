@@ -76,18 +76,6 @@
                         </div>
                     </div>
                     <!--clossing edit username-->
-
-                    <!--form edit password-->
-                    <div class="form-group row"> 
-                        <div class="col container" >
-                              <label form="inputPassword" class="col-sm-2 col-form-label" style="font-weight: bold; padding-left: 4px !important; padding-top: 16px !important;">Password</label>
-                        </div>
-                        <div class="col-sm-10">
-                          <input type="password" class="form-control border-top-0 border-end-0 border-start-0 " style="border-radius: 0px !important; height: 54px; padding-left: 12px !important; padding-top: 16px !important; padding-bottom: 16px !important;" id="editpassword" name="editpassword" placeholder="Password" value="">
-                          <small class="text-danger"><?= form_error('editpassword');  ?></small>
-                        </div>
-                    </div>
-                    <!--clossing edit password-->
                     
                     <!--form edit kontak-->
                     <div class="form-group row">
