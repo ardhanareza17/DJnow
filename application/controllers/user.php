@@ -16,7 +16,7 @@ class User extends CI_Controller
     $data['title'] = 'Home';
     //ambil data user dari db
     $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-    
+    $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
     $data['postingan'] = $this->db->query("SELECT * FROM postingan")->result_array();
     //ini nanti diisi sama tampilan fix homepage, di awah ini cuma ngetes doang
     $this->load->view('user/index', $data);
@@ -30,7 +30,7 @@ class User extends CI_Controller
     $data['title'] = 'Profile';
     //ambil data user dari db
     $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-    
+    $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
     $data['postingan'] = $this->db->get_where('postingan', ['username' => $this->session->userdata('username')])->result_array();
     //ini nanti diisi sama tampilan fix homepage, di awah ini cuma ngetes doang
     $this->load->view('user/profile', $data);
@@ -45,6 +45,7 @@ class User extends CI_Controller
     $data['aku'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     //ambil data user dari db
     $data['user'] = $this->db->get_where('user', ['username' => $username])->row_array();
+    $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
     
     $data['postingan'] = $this->db->get_where('postingan', ['username' =>  $username])->result_array();
   
@@ -133,13 +134,44 @@ class User extends CI_Controller
 
   public function upload()
   {
+    $data['title'] = 'Edit Profile';
+    //ambil data user dari db
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 
     $this->form_validation->set_rules('upload_img', 'Pilih Gambar', 'required');
 
     if($this->form_validation->run() == false){
-     redirect('User');
+      redirect('User');
+      } else {
+
+              //cek jika ada gambar yang diupload
+             $upload_img = $_FILES['upload_img']['name'];
+
+            if($upload_img) {
+              $config['allowed_types'] = 'gif|jpg|png';
+              $config['max_size']     = '2048';
+              $config['upload_path'] = './res/postingan/';
+
+              $this->load->library('upload', $config);
+        
+        
+                if($this->upload->do_upload('upload_img')){
+                  $foto = $this->upload->data('file_name');
+                  $posting = array(
+                  'username' => $data['user']['username'],
+                  'foto' => $foto,
+                  'kategori' => '1');
+                  $this->db->insert('postingan', $posting);
+                 } 
+              } 
+      
+          }
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
+      Selamat! Anda berhasil memposting desain anda!!
+      </div>');
+      redirect('User');
+       
     }
-  }
   
 
   public function postingan()
@@ -151,6 +183,7 @@ class User extends CI_Controller
     //ambil data user dari db
     $data['postingan'] = $this->db->get_where('postingan', ['id' =>  $postingan_id])->row_array();
     $data['user'] = $this->db->get_where('user', ['username' => $data['postingan']['username']])->row_array();
+    $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
     $this->load->view('user/postingan', $data);
   }
 

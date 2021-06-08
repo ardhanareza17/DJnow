@@ -106,7 +106,7 @@
 		#segitiga{
 			height:0px;
 			width:0px;
-			border-left:solid 17.5px #FFD300;
+			
 			border-top:solid 17.5px transparent;
 			border-bottom:solid 17.5px transparent;
 			float: right;
@@ -117,7 +117,7 @@
 		#persegi {
    			height: 35px;
    			width: 100px;  			
-   			background: #FFD300;
+   	
 			float: right;
 			margin-top: -30px;
 		}
@@ -199,14 +199,15 @@
 				<div id="nametag" style="font-weight: bold;color: #C13301;">
 							<?= $user['username']; ?>	
 				</div>
-<?php 
-			//	<!-- box ujung segitiga -->
-			//	<div id="segitiga"></div>
-			//	<div id="persegi">
-			//			<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Grafis
-			//			</p>
-			//	</div>
-      ?>
+ 
+        <!-- box ujung segitiga -->
+        <?php $id_kategori = $postingan['kategori']; ?>
+				<div id="segitiga" style="border-left:solid 17.5px <?= $kategori[$id_kategori-1]['warna']; ?>;"></div>
+				<div id="persegi" style= "background: <?= $kategori[$id_kategori-1]['warna']; ?>;">
+						<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> <?= $kategori[$id_kategori-1]['nama']; ?>
+						</p>
+				</div>
+     
        <hr id="line1" align="right" width="100%" height="1px" color="#C13301" size="1">
 				
 				<div>

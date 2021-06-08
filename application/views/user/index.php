@@ -154,7 +154,7 @@
 			#segitiga{
 				height:0px;
 				width:0px;
-				border-left:solid 17.5px #FFD300;
+				
 				border-top:solid 17.5px transparent;
 				border-bottom:solid 17.5px transparent;
 				float: right;
@@ -165,7 +165,6 @@
 			#persegi1 {
 	   			height: 35px;
 	   			width: 100px;  			
-   				background: #EFDB82;
 				float: right;
 				margin-top: -30px;
 			}		
@@ -205,7 +204,7 @@
 					<?php echo form_open_multipart('User/upload');?>
 						<img id="profile_pic" src="res/profile/<?= $user['foto']?>">
 						&nbsp; 
-						<input type="file" id="upload_img" name="upload_img" label="Pilih Gambar" placeholder="upload desain anda disini">		
+						<input type="file" id="upload_img" name="upload_img" <?php //label="Pilih Gambar" placeholder="upload desain anda disini" ?>>		
 						<!--<select id="option">
 							<option>Pilih Kategori</option>
 						</select>	-->
@@ -218,7 +217,7 @@
 				<!--timeline story desain-->
 				<?php $jumlah = count($postingan); ?>
 				<?php for ($x = ($jumlah+$jumlah%2)/2 - 1; $x >= 0 ; $x--) : ?>
-
+				<?php $id_kategori = $postingan[$jumlah-1]['kategori']; ?>
 					<div style="display: flex;">
 						<?php 
 							$akun1 = $this->db->get_where('user', ['username' => $postingan[$jumlah-1]['username']])->row_array(); ?>
@@ -234,12 +233,12 @@
 								</div>
 							
 							<!-- box ujung segitiga -->
-						<!--  
-							<div id="segitiga"></div>
-							<div id="persegi">
-							<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Grafis
+					 
+							<div id="segitiga" style="border-left:solid 17.5px <?= $kategori[$id_kategori-1]['warna']; ?>;"></div>
+							<div id="persegi" style= "background: <?= $kategori[$id_kategori-1]['warna']; ?>;">
+							<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> <?= $kategori[$id_kategori-1]['nama']; ?>
 							</p>
-							</div>-->
+							</div>
 							<?php $id = $postingan[$jumlah-1]['id'] ?>
 							<a href="<?= base_url('User/postingan?username=0&postingan='), $id, '&page='; ?>">	
 								<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-1]['foto']; ?>">
@@ -259,7 +258,7 @@
 					
 						<?php if($jumlah-2>=0){
 											$akun2 = $this->db->get_where('user', ['username' => $postingan[$jumlah-2]['username']])->row_array(); ?>
-						
+										<?php $id_kategori = $postingan[$jumlah-2]['kategori']; ?>
 											<div id="story" style="width:460px;height: 600px; margin:right; margin-top:20px; margin-left: 20px; background-color: white; min-height: 400px;">
 												<div>
 													<a href="<?= base_url('user/akun_orang?username='),$akun2['username']; ?>">
@@ -271,11 +270,11 @@
 												</div>
 					
 					<!-- box ujung segitiga -->
-					<!-- <div id="segitiga1"></div>
-					<div id="persegi1">
-					<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> Busana
+					 <div id="segitiga1"style="border-left:solid 17.5px <?= $kategori[$id_kategori-1]['warna']; ?>;"></div>
+					<div id="persegi1" style= "background: <?= $kategori[$id_kategori-1]['warna']; ?>;">
+					<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> <?= $kategori[$id_kategori-1]['nama']; ?>
 					</p>
-					</div>-->
+					</div>
 					<?php $id = $postingan[$jumlah-2]['id'] ?>
 							<a href="<?= base_url('User/postingan?username=0&postingan='), $id, '&page='; ?>">	
 												<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-2]['foto']; ?>">
