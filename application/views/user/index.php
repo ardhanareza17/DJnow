@@ -204,7 +204,7 @@
 					<?php echo form_open_multipart('User/upload');?>
 						<img id="profile_pic" src="res/profile/<?= $user['foto']?>">
 						&nbsp; 
-						<input type="file" id="upload_img" name="upload_img" <?php //label="Pilih Gambar" placeholder="upload desain anda disini" ?>>		
+						<input type="file" id="upload_img" name="upload_img" label="Pilih Gambar" <?php // placeholder="upload desain anda disini" ?>>		
 						<!--<select id="option">
 							<option>Pilih Kategori</option>
 						</select>	-->

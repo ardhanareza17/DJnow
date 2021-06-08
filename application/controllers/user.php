@@ -68,6 +68,8 @@ class User extends CI_Controller
     //$this->form_validation->set_rules('editpassword', 'Password', 'required|trim', [
     //  'required' => 'Password harus diisi!'
     //]);
+   
+    
     $this->form_validation->set_rules('editusername', 'Username', 'required|trim', [
       'required' => 'Username tidak boleh kosong!',
     ]);
@@ -134,15 +136,16 @@ class User extends CI_Controller
 
   public function upload()
   {
-    $data['title'] = 'Edit Profile';
     //ambil data user dari db
     $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 
-    $this->form_validation->set_rules('upload_img', 'Pilih Gambar', 'required');
+    //$this->form_validation->set_rules('upload_img', 'Pilih Gambar', 'required',  [
+      //'required' => 'foto tidak boleh kosong!'
+    //]);
 
-    if($this->form_validation->run() == false){
-      redirect('User');
-      } else {
+    //if($this->form_validation->run() == false) {
+      //$this->load->view('User/profile', $data);
+      //} else {
 
               //cek jika ada gambar yang diupload
              $upload_img = $_FILES['upload_img']['name'];
@@ -162,10 +165,10 @@ class User extends CI_Controller
                   'foto' => $foto,
                   'kategori' => '1');
                   $this->db->insert('postingan', $posting);
-                 } 
-              } 
+                 } else {echo "ga keupload";}
+              } else {echo "ga keambil datanya" ;}
       
-          }
+       //    }
         $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
       Selamat! Anda berhasil memposting desain anda!!
       </div>');
