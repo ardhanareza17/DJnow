@@ -187,7 +187,31 @@ class User extends CI_Controller
     $data['postingan'] = $this->db->get_where('postingan', ['id' =>  $postingan_id])->row_array();
     $data['user'] = $this->db->get_where('user', ['username' => $data['postingan']['username']])->row_array();
     $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
+    $data['komentar'] = $this->db->get_where('komentar', ['id_postingan' =>  $postingan_id])->result_array();
     $this->load->view('user/postingan', $data);
+  }
+
+
+  public function komentar()
+  {
+    $isi = $this->input->post('komentar');
+    $username = $this->session->userdata('username');
+    $id_postingan = $_GET['id'];
+    $data['halaman'] = $_GET['page'];
+    $komen = array(
+      'Id_postingan' => $id_postingan,
+      'username' => $username,
+      'isi' => $isi);
+      $this->db->insert('komentar', $komen);
+    $data['title'] = 'Profile';
+    $data['username'] = $_GET['username'];
+    //ambil data user dari db
+    $data['postingan'] = $this->db->get_where('postingan', ['id' =>  $id_postingan])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $data['postingan']['username']])->row_array();
+    $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
+    $data['komentar'] = $this->db->get_where('komentar', ['id_postingan' =>  $id_postingan])->result_array();
+    $this->load->view('user/postingan', $data);
+
   }
 
 }

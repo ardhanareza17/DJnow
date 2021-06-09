@@ -161,8 +161,9 @@
 			height: 30px;
 			width: 30px;
 		}
+
 		#komentar{
-			width: 450px;
+			width: 420px;
 			height: 31px;
 			margin-left: 45px ; 
 			background-color: #E0DFD5;
@@ -174,6 +175,27 @@
 			background-position: right;
 			background-size: 30px;
 		}
+		#kirim_komentar1{
+			position: absolute;
+			left: 93.77%;
+			right: 3.44%;
+			top: 90.01%;
+			bottom: 5.49%;
+
+			opacity: 0.5;
+		}
+		#kirim_komen{
+			height: 36px;
+			width: 40.102325439453125px;
+			left: 1350.30224609375px;
+			top: 721px;
+			bottom: 5.49%;
+			border-radius: 0px;
+			opacity: 0.5;
+			margin-bottom:-13px;
+			margin-right:0px;
+		}
+
 	</style></head>
 
 	
@@ -208,18 +230,24 @@
 						</p>
 				</div>
      
-       <hr id="line1" align="right" width="100%" height="1px" color="#C13301" size="1">
 				
+				<?php for($kom = 0 ; $kom < count($komentar); $kom++) :  ?>
+					<?php $username_komen = $komentar[$kom]['username']; 
+				$akun = $this->db->get_where('user', ['username' => $username_komen])->row_array();?>
 				<div>
-					<img id="img_story1" src="<?= base_url('res'); ?>/postingan2_files/profile.png">	
-				</div>
-				<div id="nametag1" style="font-weight: bold;color: #C13301;">
-							Noname
-				</div>
-				<p id="teks" style="text-align: left;font-size: 16px; color: black;">
-								Keren, bisakah kita berkolaborasi?
+					<hr id="line1" align="right" width="100%" height="1px" color="#C13301" size="1">
+					<div>
+					<img id="img_story1" src="<?= base_url('res'); ?>/profile/<?= $akun['foto']?>">	
+					</div>
+					<div id="nametag1" style="font-weight: bold;color: #C13301;">
+							<?= $akun['nama_lengkap']; ?>
+					</div>
+					<p id="teks" style="text-align: left;font-size: 16px; margin-right:100px; color: black;">
+								<?= $komentar[$kom]['isi']; ?>
 							</p> 
-				<span id="reply" style="color: #C13301"><span><span style="color: #C13301">Reply</span></span></span>
+					<span id="reply" style="color: #C13301"><span><span style="color: #C13301; margin-right:-100px">Reply</span></span></span>
+				</div>
+				<?php endfor; ?>
 
 				<div>
 					<img id="like" src="<?= base_url('res'); ?>/postingan2_files/like1.png">
@@ -228,7 +256,12 @@
 					</p>
 					<img id="share" src="<?= base_url('res'); ?>/postingan2_files/share.png">
 					<img id="download" src="<?= base_url('res'); ?>/postingan2_files/download.png">
-					<input type="text" id="komentar" placeholder="	tambah komentar">
+					<form action="<?= base_url('User/komentar?id='), $postingan['id'],"&page=",$halaman,"&username=",$username; ?>" method="post">
+						<input type="text" name="komentar" id="komentar" placeholder="	tambah komentar">
+						<button type="submit" id="kirim_komen" >
+						<img id="kirim_komen" src="<?= base_url('res'); ?>/kirim_komentar.png">
+						</button>
+					</form>
 				</div>
 			</div>
 		</div> 
