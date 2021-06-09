@@ -1,6 +1,6 @@
 <p align="center">
   <a href="">
-    <img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/logo.png" alt="DJnow" width=72 height=80>
+    <img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/logo.png" alt="DJnow" width=95 height=46>
   </a>
 
   <h2 align="center">Sistem Informasi DJnow</h2>
@@ -28,13 +28,14 @@
 ## User Analysis
 <h3> User Story <h/3> </br>
 - Sebagai user, agar dapat mengakses aplikasi DJNOW, saya dapat melakukan registrasi akun baik menggunakan email maupun terhubung dengan akun Google. </br>
-- Sebagai seorang admin, agar dapat me-validasikan akun user yang mendaftar, saya dapat menyetujui akun tersebut dapat terdaftar atau tidak </br>
 - Sebagai user yang telah berhasil membuat akun, agar dapat masuk ke dalam aplikasi, saya dapat melakukan "Login" </br>
 - Sebagai seorang user yang telah login, agar dapat mengabadikan karya saya, saya dapat mempublikasikannya di aplikasi DJnow </br>
 - Sebagai seorang admin, agar dapat me-validasikan postingan, saya dapat menghapus atau membiarkan postingan tersebut tetap ter-upload </br>
-- Sebagai user yang memiliki akun, agar dapat mencari referensi design grafis, saya dapat mencari referensi melalui timeline</br>
+- Sebagai seorang admin, agar dapat memperbanyak kategori yang dapat di telusuri, saya dapat menambahkan kategori yang dapat dipilih user </br>
+- Sebagai user yang memiliki akun, agar dapat mencari referensi desain grafis, saya dapat mencari referensi melalui timeline </br>
 - Sebagai user yang memiliki akun, agar dapat mengapresiasi sebuah postingan karya, saya dapat memberikan 'Like' dan 'Comment' pada postingan tersebut</br>
-- Sebagai user yang memiliki akun, agar dapat melihat kembali sebuah postingan yang telah diliat di timeline, saya dapat menyimpan postingan tersebut </br>
+- Sebagai user yang memiliki akun, agar dapat mengubah data diri dan portofolio, saya dapat menyunting informasi mengenai data diri saya tersebut </br>
+- Sebagai user yang memiliki akun, agar dapat mengetahui informasi mengenai data diri dan portofolio pengguna lain, saya dapat mengunjungi profile pengguna tersebut
 - Sebagai user yang memiliki akun, agar dapat menampilkan foto profile saya, saya dapat memasangnya dengan memilih foto yang terdapat pada perangkat saya </br>
 - Sebagai seorang designer, agar dapat mengenalkan diri saya, saya dapat menampilkan portofolio diri saya pada bagian 'Profile' </br>
 - Sebagai costumer yang memiliki akun, agar dapat melakukan kerjasama dengan designer, saya dapat menghubungi kontak designer yang tertera pada 'Profile' </br>
@@ -91,7 +92,7 @@ Teknologi				: PHP, CSS/HTML, dan Javascript </br>
 - Arsitektur Sistem
 <p align="center">
 <a>
-<img src="https://drive.google.com/drive/u/0/folders/1jBiaLG0AHW2xOs3RMFzzN33HO4umhdTW", width=700>
+<img src="", width=700>
 </a>
 </p>
 
@@ -107,19 +108,28 @@ Fungsi utama yang dikembangkan yaitu, "Upload foto" untuk me-publikasikan karya;
 
 ## Hasil Implementasi
 - Screenshot Sistem
+<img src=, width=700>
+<img src=, width=700>
+<img src=, width=700>
+<img src=, width=700>
 - Link Aplkikasi (jika sudah deploy)
 
 ## Testing
 Website ini memiliki beberapa skenario, yaitu:
 1. Landing Page: Pengguna akan diarahkan ke landing page ketika menjalankan aplikasi kemudian pengguna akan menuju login page.
-2. Login Page: Pengguna akan diminta untuk mengisi kolom "Username", "Password", dan mengaktifkan box "ingat saya". Jika benar, maka akan di arahkan ke laman "Home".
+2. Login Page: Pengguna akan diminta untuk mengisi kolom "Username", "Password", dan mengaktifkan box "ingat saya". Jika benar, maka akan di arahkan ke laman "Home". Namun apabila pengguna terindikasi bahwa akun tersebut merupakan akun admin, saat login pengguna akan di arahkan menuju laman "Dashboard Admin"
 3. Register: Pengguna diminta untuk mengisi data diri berupa nama lengkap, username, alamat email, tanggal lahir, password, dan konfirmasi password. Akan ada peringatan apabila pengisian data tidak sesuai format. Jika berhasil data akan masuk ke database realtime aplikasi, dan akan di arahkan ke laman "Home"
 3. Home page: Pengguna dapat menelusuri karya-karya atau unggahan yang telah di unggah oleh desainer.
 4. Halaman Unggah: Pengguna dapat mempublikasikan karyanya yang akan muncul di halaman "Home" pengguna lain maupun dirinya sendiri.
 5. Halaman notifikasi: Pengguna dapat melihat aktivitas pengguna lain terhadap unggahan-nya.
 6. Halaman Profile: Pengguna dapat melihat kumpulan unggahan yang sudah di unggah, dan juga dapat mengubah informasi data diri dengan menekan "Edit Profile", kemudian akan diarahkan ke laman "Edit Profile".
-7. Halaman Edit Profile: Pengguna dapat mengubah informasi diri berupa, nama, username, kontak, dan biodata. Apabila berhasil mengubah data, maka akan di arahkan ke laman "Profile"
-8. Logout : Pengguna dapat keluar dari segala halaman yang terdapat pada sistem dan menuju ke login page.
+7. Halaman Edit Profile: Pengguna dapat mengubah informasi diri berupa nama, username, kontak, dan biodata. Apabila berhasil mengubah data, maka akan di arahkan ke laman "Profile"
+8. Halaman Dashboard Admin: Admin dapat melihat rangkuman informasi mengenai data pengguna, data unggahan, serta kategori yang tersedia.
+9. Halaman Data Pengguna: Admin dapat melihat tabel yang berisi informasi mengenai akun user yang terdaftar pada website tersebut.
+10. Halaman Data Unggahan: Admin dapat melihat tabel yang berisi informasi mengenai banyaknya unggahan yang telah ter-publikasikan. Admin juga dapat menghapus unggahan pengguna yang tidak memenuhi persyaratan.
+11. Halaman Kategori: Admin dapat melihat kategori apa saja yang tersedia pada website dan dapat menambahkan kategori tersebut.
+12. Logout : Pengguna dapat keluar dari segala halaman yang terdapat pada sistem dan menuju ke login page.
+
 - Positive Cases
 - Negative Cases
 
