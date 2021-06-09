@@ -9,6 +9,13 @@
 			height: 50px;
 			background-color: #F2994A;
 			color: #FFE5B4;
+			list-style-type: none;
+    			top: 0;
+		    	position: fixed;
+		    	overflow: hidden;
+    			width: 100%;
+    			z-index: 1;
+    			margin-left: -10px;
 			}
 			#search_box{
 				width: 690px;
@@ -184,6 +191,8 @@
 	
 	<body style="font-family: calibri; background-color: #FFE5B4;">
 		<!-- top bar-->
+
+
 		<div id="orange_bar">
 			<div style="width: 900px; margin:auto;font-size: 30px">
 				<img id="rata" src="<?= base_url('assets'); ?>/res/logo.png" width="60" height="30">
@@ -200,7 +209,10 @@
 				<a href="<?= base_url('User'); ?>">				
 				<img id="rata1" src="<?= base_url('res/navbar_user'); ?>/home4.png" style="width:20px ; height:20px; float:right;">
 				<a>
-				
+			</div>
+		</div>
+		<div>
+			<div style="width: 900px; margin:auto;font-size: 30px">		
 				<!--box status-->
 				<div id="status" style="width:900px; margin: auto; margin-top:20px;background-color: white; min-height: 0px;">
 					<?php echo form_open_multipart('User/upload');?>
@@ -246,13 +258,13 @@
 								<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-1]['foto']; ?>">
 							<a>
 								<a> 
-									<img id="icon" src="res/like.png">
+									<img id="icon" src="<?= base_url('res/bar_postingan'); ?>/like_bolong.png">
 								</a>
 								<a>
-									<img id="icon1" src="res/share.png">
+									<img id="icon1" src="<?= base_url('res/bar_postingan'); ?>/share_merah.png">
 								</a>
 								<a>
-									<img id="icon1" src="res/download.png">
+									<img id="icon1" src="<?= base_url('res/bar_postingan'); ?>/download_merah.png">
 								</a>
 								<input type="text" id="komentar" placeholder="	tambah komentar">
 							</div>
@@ -282,13 +294,13 @@
 												<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-2]['foto']; ?>">
 												<a>
 												<a> 
-													<img id="icon" src="res/like.png">
+													<img id="icon" src="<?= base_url('res/bar_postingan'); ?>/like_bolong.png">
 												</a>
 												<a>
-													<img id="icon1" src="res/share.png">
+													<img id="icon1" src="<?= base_url('res/bar_postingan'); ?>/share_merah.png">
 												</a>
 												<a>
-													<img id="icon1" src="res/download.png">
+													<img id="icon1" src="<?= base_url('res/bar_postingan'); ?>/download_merah.png">
 												</a>
 												<input type="text" id="komentar" placeholder="	tambah komentar">
 											</div>
@@ -300,11 +312,11 @@
 					</div>				
 				<?php endfor; ?>
 
-
+				</div>
+		</div>
 
 					
-			</div>
-		</div>
+			
 	</body>
 	</html>
 	

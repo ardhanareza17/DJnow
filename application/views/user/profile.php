@@ -6,10 +6,18 @@
 		<title>Profile | DJNow</title>
 		<style type="text/css">
 	
-			#orange_bar{
+		#orange_bar{
+
 				height: 50px;
 				background-color: #F2994A;
 				color: #FFE5B4;
+				list-style-type: none;
+					top: 0;
+					position: fixed;
+					overflow: hidden;
+					width: 100%;
+					z-index: 1;
+					margin-left: -10px;
 			}
 			#search_box{
 				width: 690px;
@@ -105,9 +113,12 @@
 				<a href="<?= base_url('User'); ?>">
 					<img id="rata1" src="<?= base_url('res/navbar_user'); ?>/home4.png" style="width:20px ; height:20px; float:right;">
 				<a>
+				</div>
+		</div>		
 							
 
-							
+		<div>
+			<div style="width: 900px; margin:auto;font-size: 30px">	
 							<!--bio profile-->
 							<div style="display: flex;">
 								<div id="story" style="width:460px;height: 530px; margin: left; margin-left: -5px; margin-top:20px;background-color: #FDFAE6; min-height: 400px;">

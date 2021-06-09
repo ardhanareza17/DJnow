@@ -118,16 +118,13 @@
 
 			<div>
 				<div >
-          <?php $this->db->select('id');
-                $this->db->from('postingan');
-                $this->db->where('username =', $user['username']);
-                $query = $this->db->get()->row_array();
+          <?php for($q=0;$q<count($query);$q++)
+          {
                 $this->db->select('*');
                 $this->db->from('notifikasi');
-                $this->db->where_in('id_postingan', $query);
+                $this->db->where_in('id_postingan', $query[$q]);
                 $this->db->where('dari_username !=', $user['username']);
-                $notif = $this->db->get()->result_array();
-                ?>
+                $notif = $this->db->get()->result_array(); ?>     
           <?php for($x=count($notif)-1; $x>=0; $x--) : ?>
           <?php $userlain = $this->db->get_where('user', ['username' => $notif[$x]['dari_username']])->row_array(); 
           $postingan = $this->db->get_where('postingan', ['id' => $notif[$x]['id_postingan']])->row_array();
@@ -148,7 +145,8 @@
             </p>
             <?php } ?>
           </div>
-          <?php endfor; ?>
+          <?php endfor;
+          }; ?>
 				</div>
 			</div>
 	
