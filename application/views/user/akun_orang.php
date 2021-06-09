@@ -99,7 +99,9 @@
 				<a href="<?= base_url('user/profile '); ?>">
 				<img id="rata1" src="<?= base_url('res'); ?>/profile/<?= $aku['foto']?>" style="width:20px ; height:20px; float:right;">
 				<a>
-				<img id="rata1" src="<?= base_url('res/navbar_user'); ?>/notifikasi1.png" style="width:20px ; height:20px; float:right;">
+				<a href="<?= base_url('User/notifikasi'); ?>">
+					<img id="rata1" src="<?= base_url('res/navbar_user'); ?>/notifikasi1.png" style="width:20px ; height:20px; float:right;">
+				<a>
 				<a href="<?= base_url('User'); ?>">
 				<img id="rata1" src="<?= base_url('res/navbar_user'); ?>/home4.png" style="width:20px ; height:20px; float:right;">
 				<a>
@@ -137,7 +139,7 @@
 					<?php for ($x = 0; $x < $jumlah ; $x++) : ?>
 						<?php $id = $postingan[$x]['id'] ?>
 						<a href="<?= base_url('User/postingan?postingan='), $id, '&page=/akun_orang&username=',$user['username']; ?>">
-							<img id="portofolio" src="<?= base_url('res/postingan/'), $postingan[$x]['id'],'.jpg'; ?>">
+							<img id="portofolio" src="<?= base_url('res/postingan/'), $postingan[$x]['foto']; ?>">
 						<a>
 					<?php endfor; ?>
 					</div>

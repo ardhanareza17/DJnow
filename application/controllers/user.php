@@ -217,4 +217,17 @@ class User extends CI_Controller
 
   }
 
+  public function notifikasi()
+  {
+    $data['title'] = 'Notifikasi';
+    //ambil data user dari db
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+    //$data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
+    $data['suka'] = $this->db->query("SELECT * FROM suka")->result_array();
+    $data['notifikasi'] = $this->db->query("SELECT * FROM user")->result_array();
+    
+    //ini nanti diisi sama tampilan fix homepage, di awah ini cuma ngetes doang
+    $this->load->view('User/notifikasi', $data);
+  }
+
 }
