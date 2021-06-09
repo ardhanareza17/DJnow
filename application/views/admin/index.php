@@ -160,7 +160,7 @@
                                         </div>
                                     </div>
                                     <div class="col text-end">
-                                        <img style="opacity: 0.4; margin-bottom: 5px; margin-right: 20px; margin-top: 15px;" src="res/kategori_panel.png" width="85px" height="95px">
+                                        <img style="opacity: 0.4; margin-bottom: 5px; margin-right: 20px; margin-top: 15px;" src="res/kategori/arsitektur.png" width="85px" height="95px">
                                     </div>
                                 </div>
                             <div class="row" style="border-radius: 8px; margin:auto; background-color: white; opacity: 0.3;">
