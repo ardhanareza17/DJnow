@@ -252,7 +252,7 @@
 				<div>
 					<img id="like" src="<?= base_url('res'); ?>/postingan2_files/like1.png">
 					<p id="teks2" style="color:#C13301;font-weight: bold;font-size: 16px;">
-						3 likes
+						<?= count($suka); ?> likes
 					</p>
 					<img id="share" src="<?= base_url('res'); ?>/postingan2_files/share.png">
 					<img id="download" src="<?= base_url('res'); ?>/postingan2_files/download.png">

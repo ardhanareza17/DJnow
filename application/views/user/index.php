@@ -189,14 +189,14 @@
 				<img id="rata" src="<?= base_url('assets'); ?>/res/logo.png" width="60" height="30">
         &nbsp;<input type="text" id="search_box" placeholder="Cari di DJNow">
         <a href="<?= base_url('auth/logout'); ?>">
-        <img id="rata1" src="res/logout2.png" style="width:20px ; height:20px; float:right;">
+        <img id="rata1" src="<?= base_url('res/navbar_user'); ?>/logout2.png" style="width:20px ; height:20px; float:right;">
         <a>		
         <a href="<?= base_url('user/profile '); ?>">
-        <img id="rata1" src="res/profile/<?= $user['foto']?>" style="width:20px ; height:20px; float:right;">	
+        <img id="rata1" src="<?= base_url('res'); ?>/profile/<?= $user['foto']?>" style="width:20px ; height:20px; float:right;">	
         <a>			
-				<img id="rata1" src="res/notifikasi1.png" style="width:20px ; height:20px; float:right;">
+				<img id="rata1" src="<?= base_url('res/navbar_user'); ?>/notifikasi1.png" style="width:20px ; height:20px; float:right;">
 				<a href="<?= base_url('User'); ?>">				
-				<img id="rata1" src="res/home4.png" style="width:20px ; height:20px; float:right;">
+				<img id="rata1" src="<?= base_url('res/navbar_user'); ?>/home4.png" style="width:20px ; height:20px; float:right;">
 				<a>
 				
 				<!--box status-->
