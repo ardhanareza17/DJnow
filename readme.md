@@ -92,12 +92,12 @@ Teknologi				: PHP, CSS/HTML, dan Javascript </br>
 - Arsitektur Sistem
 <p align="center">
 <a>
-<img src="", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/arsitektur%20aplikasi.png", width=700>
 </a>
 </p>
 
 - Fungsi Utama yang Dikembangkan </br>
-Fungsi utama yang dikembangkan yaitu, "Upload foto" untuk me-publikasikan karya; "Beranda" untuk menampilkan referensi karya-karya oleh desainer; "Notifikasi 
+Fungsi utama yang dikembangkan yaitu, "Upload foto" untuk me-publikasikan karya; "Home" untuk menampilkan referensi karya-karya oleh desainer; "Like" dan "Comment" untuk memberikan apresiasi terhadap karya; "Profile" untuk menampilkan portofolio diri dan mengunjungi potofolio pengguna lain.
 
 - Fungsi CRUD
 1. Create: 
@@ -108,10 +108,10 @@ Fungsi utama yang dikembangkan yaitu, "Upload foto" untuk me-publikasikan karya;
 
 ## Hasil Implementasi
 - Screenshot Sistem
-<img src=, width=700>
-<img src=, width=700>
-<img src=, width=700>
-<img src=, width=700>
+<img src=, width=700> </br>
+<img src=, width=700> </br>
+<img src=, width=700> </br>
+<img src=, width=700> </br>
 - Link Aplkikasi (jika sudah deploy)
 
 ## Testing
@@ -130,8 +130,50 @@ Website ini memiliki beberapa skenario, yaitu:
 11. Halaman Kategori: Admin dapat melihat kategori apa saja yang tersedia pada website dan dapat menambahkan kategori tersebut.
 12. Logout : Pengguna dapat keluar dari segala halaman yang terdapat pada sistem dan menuju ke login page.
 
-- Positive Cases
-- Negative Cases
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Penggunaan Tag Tabel</title>
+</head>
+<body>
+  
+<table border = "2">
+  <tr>
+    <th bgcolor="grey" rowspan="1">ID Pengujian</th>
+    <th bgcolor="grey" colspan="1">Skenario Tes Deskripsi</th>
+    <th bgcolor="grey" colspan="1">Positif/Negatif</th>
+    <th bgcolor="grey" colspan="1">Input</th>
+    <th bgcolor="grey" colspan="1">Output</th>
+ <tr>
+    <td>login01</hd>
+    <td>User dapat melakukan login menggunakan email dan password dengan benar</hd>
+    <td>Positif</hd>
+    <td>Username dan Password yang benar</hd>
+    <td>Login langsung ke Home Page</hd>
+ </tr>
+ <tr>
+    <td>login02</hd>
+    <td>User gagal masuk jika salah memasukan email atau password</hd>
+    <td>Negatif</hd>
+    <td>Username dan Password yang salah</hd>
+    <td>Tidak dapat masuk ke Home Page</hd>
+  <tr>
+    <td>regis01</hd>
+    <td>User mendftarkan diri</hd>
+    <td>Positif</hd>
+    <td>Nama lengkap, username, alamat email, tanggal lahir, password, dan konfirmasi password terisi semua</hd>
+    <td>Terdaftar dan masuk ke Home Page</hd>
+ </tr>
+ <tr>
+    <td>regis02</hd>
+    <td>User mendaftarkkan diri namun ada data yang tidak diisi</hd>
+    <td>Negatif</hd>
+    <td>User mengosongkan alamat email</hd>
+    <td>Menunjukkan bagian yang tidak diisi</hd>
+  </tr>
+ </table>
+ </body>
+ </html>
 
 ## Saran Untuk Pengembangan Selanjutnya
 1. Dapat mengeksplorasi lebih jauh bagaimana cara admin untuk me-validasikan sebuah unggahan yang dikirimkan oleh pengguna.
