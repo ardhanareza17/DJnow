@@ -187,6 +187,7 @@ class User extends CI_Controller
     //ambil data user dari db
     $data['postingan'] = $this->db->get_where('postingan', ['id' =>  $postingan_id])->row_array();
     $data['user'] = $this->db->get_where('user', ['username' => $data['postingan']['username']])->row_array();
+    $data['aku'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
     $data['komentar'] = $this->db->get_where('komentar', ['id_postingan' =>  $postingan_id])->result_array();
     $data['suka'] = $this->db->get_where('suka', ['id_postingan' => $postingan_id])->result_array();
@@ -236,6 +237,64 @@ class User extends CI_Controller
     
     //ini nanti diisi sama tampilan fix homepage, di awah ini cuma ngetes doang
     $this->load->view('User/notifikasi', $data);
+  }
+
+  public function suka()
+  {
+    $username = $this->session->userdata('username') ;
+    $id_postingan = $_GET['id_postingan'];
+    $like = $_GET['suka'];
+    
+    
+    if($like == 1){
+      $array = array(
+        'id_postingan' => $id_postingan,
+        'username' => $username);
+        $this->db->insert('suka', $array);
+        
+      $this->db->where('id_postingan', $id_postingan);
+      $this->db->where('username', $username);
+      $suka = $this->db->get('suka')->row_array();
+      $array1 = array(
+        'jenis' => 1,
+        'dari_username' => $username,
+        'id_postingan' => $id_postingan,
+        'id_like_komentar' => $suka['id']);
+        $this->db->insert('notifikasi', $array1);
+
+    } else {
+      $this->db->where('id_postingan', $id_postingan);
+      $this->db->where('username', $username);
+      $suka = $this->db->get('suka')->row_array();
+      
+      $this->db->where('id_postingan', $id_postingan);
+      $this->db->where('dari_username', $username);
+      $this->db->where('jenis', 1);
+      $this->db->where('id_like_komentar', $suka['id']);
+      $this->db->delete('notifikasi');
+
+      $this->db->where('id_postingan', $id_postingan);
+      $this->db->where('username', $username);
+      $this->db->delete('suka');
+
+
+    }
+
+
+    $data['username'] = $_GET['username'];
+    $data['halaman'] = $_GET['page'];
+    $postingan_id = $id_postingan;
+    $data['title'] = 'Profile';
+    //ambil data user dari db
+    $data['postingan'] = $this->db->get_where('postingan', ['id' =>  $postingan_id])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $data['postingan']['username']])->row_array();
+    $data['aku'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+    $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
+    $data['komentar'] = $this->db->get_where('komentar', ['id_postingan' =>  $postingan_id])->result_array();
+    $data['suka'] = $this->db->get_where('suka', ['id_postingan' => $postingan_id])->result_array();
+    $this->load->view('user/postingan', $data);
+
+
   }
 
 }

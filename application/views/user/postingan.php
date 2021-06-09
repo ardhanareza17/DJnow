@@ -1,270 +1,295 @@
-<!DOCTYPE html>
-<!-- saved from url=(0037)http://localhost/DJnow/postingan2.php -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Postingan</title>
-	<style type="text/css">
-		#kiri{
-			width:820.8px;
-			height: 659px; 
-			margin: left;  
-			margin-top:-10px;
-			margin-left: -10px;
-			margin-bottom: -10px;
-			margin-right: -10px;
-			background-color: #FFE5B4;
-			min-height: 400px;
-		}
-		#kanan{
-			width:547.2px;
-			height: 659px; 
-			margin: right;  
-			margin-top:-10px;
-			margin-left: 10px;
-			margin-bottom: -10px;
-			margin-right: -10px;
-			background-color: #F2994A;
-			min-height: 400px;
-			letter-spacing: 
-		}
-		#close{
-			margin-top:15px;
-			margin-left: 60px;
-			margin-bottom: 21px;
-			width: 20px;	
-			height: 20px;
-			color: #C13301;
-		}
-		#logo{
-			margin-top:15px;
-			margin-bottom: 10px;
-			margin-right: 10px;
-			margin-left: 10px;
-			width: 90px;
-			height: 45px;
-		}
-		#image{
-			margin-top: -12px;
-			width: 530px;
-			height: 570px;
-			margin-right: 120px;
-			margin-left: 100px;
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-			
-		}
-		#klik_kanan{
-			width: 15px;
-			height: 30px;
-			margin-bottom:270px;
-		}
-		#klik_kiri{
-			width: 15px;
-			height: 30px;
-			margin-bottom:270px;
-			margin-left: 20px;
-		}
-		#line{
-			margin-top: 60px;
-			margin-bottom: -60px;
-		}
-		#line1{
-			margin-top: 30px;
-			margin-bottom: -60px;
-		}
-		#img_story{
-			width: 40px;
-			height: 40px;
-			border-radius: 50% ;
-			margin-left: 80px;				
-			margin-top: 80px;
-			margin-bottom: 10px;
-			border:none;
-			padding: 4px;
-		}
-		#nametag{
-			margin-left:  140px;
-			margin-top: -50px;
-			font-size: 16px;
-			
-		}
-		#img_story1{
-			width: 40px;
-			height: 40px;
-			border-radius: 50% ;
-			margin-left: 80px;				
-			margin-top: 80px;
-			margin-bottom: -80px;
-			border:none;
-			padding: 4px;
-		}
-		#nametag1{
-			margin-left:  140px;
-			margin-top: 30px;
-			margin-bottom: -80px;
-			font-size: 16px;
-			
-		}
-		#segitiga{
-			height:0px;
-			width:0px;
-			
-			border-top:solid 17.5px transparent;
-			border-bottom:solid 17.5px transparent;
-			float: right;
-			margin-top: -30px;
-			margin-right: 80px;
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <title>DJNOW (Design Jaman Now)</title>
+        <style type="text/css">
+            body { background: #FFE5B4 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+        </style>
+    </head>
+    <body>
+    <!--NAVBAR-->
+        <nav class="navbar fixed-top navbar-light" style="border-radius: 0px;  background-color: none; height: 68px;">
+            <div class="container" style="margin-top: -8px;">
+                <div class="row" style=" margin-left: -125px;">
+                    <div class="col" style="padding-top: 10px; max-width: 52px; background-color: none;"> 
+                    <a href="<?php if($username == 0){ echo base_url('User'),$halaman; } else {?> <?= base_url('User'),$halaman, '?username=',$username; }?>">
+                      <img src="<?= base_url('res'); ?>/close.png" alt="Tutup" width="25px" height="25px">
+                    </a>
+                    </div>
+                    <div class="col" style="width: 100vw; background-color: none;">
+                        <img src="<?= base_url('res'); ?>/logo.png" width="95px" height="46px">
+                    </div>
+                    <div class="col" style="margin-top: -8px; margin-bottom: -15px; max-width: 550px; background-color: #F2994A;">
+                        
+                    </div>
+                </div> 
+            </div>
+        </nav>
+        <!--CLOSE NAVBAR-->
 
-		}
-		#persegi {
-   			height: 35px;
-   			width: 100px;  			
-   	
-			float: right;
-			margin-top: -30px;
-		}
-		#teks{
-			margin-top: 80px;
-			margin-bottom: -120px;
-			margin-left: 140px;
-		}
-		#reply{
-			float: right;
-			margin-top: 60px;
-			margin-bottom: -120px;
-			margin-right: -100px;
-		}
-		#like{
+        <!--KONTEN-->
+        <div class="container" style="margin-left: 0px; height: 100vh;">
+            <div class="row" style="height: 100vh; width: 100vw; padding-top: 68px;">
+                <div class="col d-flex flex-wrap align-items-center" style="max-width: 100px; background-color: none;">
+                    <a href="#">
+                        <img src="<?= base_url('res'); ?>/kiri.png" width="32px" height="32px" alt="Post Sebelumnya" data-toggle="tooltip" data-placement="bottom" title="Post Sebelumnya">
+                    </a>
+                </div>
+                <div class="col d-flex flex-wrap align-items-center justify-content-center" style=" background-color: none;">
+                    <img src="<?= base_url('res/postingan/'), $postingan['foto']; ?>" width="450px" height="500px" alt="">
+                </div>
+                <div class="col d-flex flex-wrap align-items-center justify-content-end" style="max-width: 100px; background-color: none;">
+                    <a href="#">
+                        <img src="<?= base_url('res'); ?>/kanan.png" width="32px" height="32px" alt="Post Selanjutnya" data-toggle="tooltip" data-placement="bottom" title="Post Selanjutnya">
+                    </a>
+                </div>
+                <div class="col" style="max-width: 550px; background-color: #F2994A;">
+                    <div class="row border-top border-bottom" style=" border: 0 0 0 1px solid transparent !important; border-color: #C13301 !important; height: 68px; background-color:#F2994A;">
+                        <div class="userupload" style="width: 100vw;">
+                            <div class="row">
+                                <div class="pengupload" style="margin-top: 5px; max-width: 495px; margin-left: 27px; background-color: none;">
+                                    <div class="row">
+                                        <div class="col" style="max-width: 60px; height: 55px;">
+                                            <div class="potoprofil d-flex flex-wrap align-items-center justify-content-center">
+                                                <img src="<?= base_url('res/profile/'), $user['foto']; ?>" class="rounded-circle" width="55px" height="55px" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col" style="margin-left: 3px; margin-top:4px;">
+                                            <div class="row" style="margin-left: -23px;">
+                                                <a href="<?= base_url('user/akun_orang?username='),$user['username']; ?>" style="font-weight: 700; color: #C13301; text-decoration: none;">
+                                                  <?= $user['username']; ?>
+                                                </a>
+                                            </div>
+                                            <div class="row" style="font-weight: 400; color: #C13301;">
+                                                <?= $postingan['tanggal_posting']; ?>
+                                            </div>
+                                        </div>
+                                        <div class="col d-flex align-items-center" style="max-width: 145px;">
+                                            <a href="#">
+                                                <img src="<?= base_url('res'); ?>/grafis_tag.png" width="130px" height="35" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  border-bottom" style="border-color: #C13301 !important; overflow-y: auto; height: 355px; max-height: 355px; margin:15px; background-color: #F2994A;">
+                        <div class="col">
 
-			margin-left: 65px;
-			margin-top: 450px;
-			margin-bottom: 4px;
-			height: 30px;
-			width: 30px;
-		}
-		#teks2{
-			margin-left: 110px;
-			margin-top: -35px;
-		}
-		#download{
-			margin-top: -40px;
-			float: right;
-			margin-bottom: -10px;
-			margin-right: 100px;
-			height: 30px;
-			width: 30px;
-		}
-		#share{
-			margin-top: -40px;
-			float: right;
-			margin-bottom: -10px;
-			margin-right: 60px;
-			margin-left: 10px
-			height: 30px;
-			width: 30px;
-		}
+                            <!--KOTAK KOMENTAR-->
+                            <!--KOMENTAR 1-->
+                            <?php for($kom = 0 ; $kom < count($komentar); $kom++) :  ?>
+					                  <?php $username_komen = $komentar[$kom]['username']; 
+				                      $akun = $this->db->get_where('user', ['username' => $username_komen])->row_array();?>
+                            <div class="row user-komentar" style="margin-left: 1px; margin-top: 5px; margin-bottom: 4px; background-color: #F2994A;">
+                                <div class="col" style="max-width: 60px; height: 55px;">
+                                    <div class="potoprofil d-flex flex-wrap align-items-center justify-content-center">
+                                        <img src="<?= base_url('res/profile/'), $akun['foto']; ?>" class="rounded-circle" width="55px" height="55px" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="margin-left: 3px; margin-top:4px;">
+                                    <div class="row" style="margin-left: -23px;">
+                                        <a href="<?= base_url('user/akun_orang?username='),$akun['username']; ?>" style="font-weight: 700; color: #C13301; text-decoration: none;">
+                                            <?= $akun['username']; ?>
+                                        </a>
+                                    </div>
+                                    <div class="row" style="font-weight: 500; color: black;">
+                                        <?= $komentar[$kom]['isi']; ?>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-center" style="font-weight: 500; opacity: 0.5;  max-width: 80px;">
+                                   <a href="#" style="text-decoration: none; color:#C13301;">Balas</a>
+                                </div>
+                            </div> 
+                            <?php endfor; ?>
+                            <!--KOMENTAR 2
+                            <div class="row user-komentar" style="margin-left: 1px; margin-top: 5px; margin-bottom: 4px; background-color: none;">
+                                <div class="col" style="max-width: 60px; height: 55px;">
+                                    <div class="potoprofil d-flex flex-wrap align-items-center justify-content-center">
+                                        <img src="<?= base_url('res'); ?>/posting1.png" class="rounded-circle" width="55px" height="55px" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="margin-left: 3px; margin-top:4px;">
+                                    <div class="row" style="margin-left: -23px;">
+                                        <a href="#" style="font-weight: 700; color: #C13301; text-decoration: none;">
+                                            ptr_tanjung
+                                        </a>
+                                    </div>
+                                    <div class="row" style="font-weight: 500; color: black;">
+                                        Keren, bisakah kita berkolaborasi?
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-center" style="font-weight: 500; opacity: 0.5;  max-width: 80px;">
+                                    <a href="#" style="text-decoration: none; color:#C13301;">Balas</a>
+                                 </div>
+                            </div>
 
-		#komentar{
-			width: 420px;
-			height: 31px;
-			margin-left: 45px ; 
-			background-color: #E0DFD5;
-			border:none;
-			padding: 4px;
-			border-radius: 15px;
-			background-image: url(res/send1.png);
-			background-repeat: no-repeat;
-			background-position: right;
-			background-size: 30px;
-		}
-		#kirim_komentar1{
-			position: absolute;
-			left: 93.77%;
-			right: 3.44%;
-			top: 90.01%;
-			bottom: 5.49%;
+                            KOMENTAR 3
+                            <div class="row user-komentar" style="margin-left: 1px; margin-top: 5px; margin-bottom: 4px; background-color: none;">
+                                <div class="col" style="max-width: 60px; height: 55px;">
+                                    <div class="potoprofil d-flex flex-wrap align-items-center justify-content-center">
+                                        <img src="<?= base_url('res'); ?>/posting1.png" class="rounded-circle" width="55px" height="55px" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="margin-left: 3px; margin-top:4px;">
+                                    <div class="row" style="margin-left: -23px;">
+                                        <a href="#" style="font-weight: 700; color: #C13301; text-decoration: none;">
+                                            ptr_tanjung
+                                        </a>
+                                    </div>
+                                    <div class="row" style="font-weight: 500; color: black;">
+                                        Keren, bisakah kita berkolaborasi?
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-center" style="font-weight: 500; opacity: 0.5;  max-width: 80px;">
+                                    <a href="#" style="text-decoration: none; color:#C13301;">Balas</a>
+                                 </div>
+                            </div>
 
-			opacity: 0.5;
-		}
-		#kirim_komen{
-			height: 36px;
-			width: 40.102325439453125px;
-			left: 1350.30224609375px;
-			top: 721px;
-			bottom: 5.49%;
-			border-radius: 0px;
-			opacity: 0.5;
-			margin-bottom:-13px;
-			margin-right:0px;
-		}
+                            KOMENTAR 4
+                            <div class="row user-komentar" style="margin-left: 1px; margin-top: 5px; margin-bottom: 4px; background-color: none;">
+                                <div class="col" style="max-width: 60px; height: 55px;">
+                                    <div class="potoprofil d-flex flex-wrap align-items-center justify-content-center">
+                                        <img src="<?= base_url('res'); ?>/posting1.png" class="rounded-circle" width="55px" height="55px" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="margin-left: 3px; margin-top:4px;">
+                                    <div class="row" style="margin-left: -23px;">
+                                        <a href="#" style="font-weight: 700; color: #C13301; text-decoration: none;">
+                                            ptr_tanjung
+                                        </a>
+                                    </div>
+                                    <div class="row" style="font-weight: 500; color: black;">
+                                        Keren, bisakah kita berkolaborasi?
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-center" style="font-weight: 500; opacity: 0.5;  max-width: 80px;">
+                                    <a href="#" style="text-decoration: none; color:#C13301;">Balas</a>
+                                 </div>
+                            </div>
 
-	</style></head>
+                            KOMENTAR 5
+                            <div class="row user-komentar" style="margin-left: 1px; margin-top: 5px; margin-bottom: 4px; background-color: none;">
+                                <div class="col" style="max-width: 60px; height: 55px;">
+                                    <div class="potoprofil d-flex flex-wrap align-items-center justify-content-center">
+                                        <img src="<?= base_url('res'); ?>/user1.png" class="rounded-circle" width="55px" height="55px" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="margin-left: 3px; margin-top:4px;">
+                                    <div class="row" style="margin-left: -23px;">
+                                        <a href="#" style="font-weight: 700; color: #C13301; text-decoration: none;">
+                                            ptr_tanjung
+                                        </a>
+                                    </div>
+                                    <div class="row" style="font-weight: 500; color: black;">
+                                        Keren, bisakah kita berkolaborasi?
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-center" style="font-weight: 500; opacity: 0.5;  max-width: 80px;">
+                                    <a href="#" style="text-decoration: none; color:#C13301;">Balas</a>
+                                 </div>
+                            </div>
 
-	
+                            KOMENTAR 6
+                            <div class="row user-komentar" style="margin-left: 1px; margin-top: 5px; margin-bottom: 4px; background-color: none;">
+                                <div class="col" style="max-width: 60px; height: 55px;">
+                                    <div class="potoprofil d-flex flex-wrap align-items-center justify-content-center">
+                                        <img src="<?= base_url('res'); ?>/posting1.png" class="rounded-circle" width="55px" height="55px" alt="">
+                                    </div>
+                                </div>
+                                <div class="col" style="margin-left: 3px; margin-top:4px;">
+                                    <div class="row" style="margin-left: -23px;">
+                                        <a href="#" style="font-weight: 700; color: #C13301; text-decoration: none;">
+                                            ptr_tanjung
+                                        </a>
+                                    </div>
+                                    <div class="row" style="font-weight: 500; color: black;">
+                                        Keren, bisakah kita berkolaborasi?
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-center" style="font-weight: 500; opacity: 0.5;  max-width: 80px;">
+                                    <a href="#" style="text-decoration: none; color:#C13301;">Balas</a>
+                                 </div>
+                            </div>
 
-	<body style="font-family: calibri; background-color: #FFE5B4;">
+                            CLOSE KOTAK KOMENTAR-->
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center" style="height: 40px; margin-left: 15px; margin-right: 15px; background-color: none;">
+                        <!--Tombol Suka-->
+                        <?php $this->db->select('username');
+                              $this->db->from('suka');
+                              $this->db->where('id_postingan =', $postingan['id']);
+                              $user_suka = $this->db->get()->result_array();
+                              $isi = [];
+                              for($ar = 0 ; $ar<count($user_suka); $ar++){
+                                $baru =array_values($user_suka[$ar]);
+                                $isi = array_merge($isi , $baru );
+                              }
+                              if( in_array($aku['username'], $isi)) { ?>
+                        <div class="col" style="max-width: 45px; max-height:45px;">
+                            <a href="<?= base_url('User/suka?suka=0&username='), $username, "&id_postingan=", $postingan['id'],"&page=",$halaman; ?>">
+                                <img src="<?= base_url('res'); ?>/love_button.png" alt="Disukai" width="35px" height="30px">
+                            </a>
+                        </div>
+                        <div class="col">
+                            Anda <?php if(count($user_suka)-1 == 0){echo "menyukai ini";} else{echo "dan ", count($user_suka)-1, " orang lainnya menyukai ini" ;} ?>
+                        </div>
+                              
+                        
+                        <?php }else { ?>
+                                <div class="col" style="max-width: 45px; max-height:45px;">
+                                  <a href="<?= base_url('User/suka?suka=1&username='), $username, "&id_postingan=", $postingan['id'],"&page=",$halaman; ?>">
+                                    <img src="<?= base_url('res/bar_postingan'); ?>/like_bolong.png" alt="Disukai" width="35px" height="30px">
+                                  </a>
+                                </div>
+                                <div class="col">
+                                  <?= count($user_suka), " orang menyukai ini"; ?>
+                                </div>
+                        <?php } ?>
 
-		<div style="display: flex;">
-			<div id="kiri">
-      <a href="<?php if($username == 0){ echo base_url('User'),$halaman; } else {?> <?= base_url('User'),$halaman, '?username=',$username; }?>">
-        <img id="close" src="<?= base_url('res'); ?>/postingan2_files/close.png">
-      <a>
-				<img id="logo" src="<?= base_url('res'); ?>/postingan2_files/logo.png">	
-				<br>
-				<!--<img id="klik_kiri" src="<?= base_url('res'); ?>/postingan2_files/kiri.png">-->
-				<img id="image" src="<?= base_url('res/postingan/'), $postingan['foto']; ?>">
-				<!--<img id="klik_kanan" src="<?= base_url('res'); ?>/postingan2_files/kanan1.png">-->
-			</div>
-			<div id="kanan">
-				<hr id="line" align="right" width="100%" height="1px" color="#C13301" size="1">
-				<div>
-					<img id="img_story" src="<?= base_url('res/profile/'), $user['foto']; ?>">	
-				</div>
-				<div id="nametag" style="font-weight: bold;color: #C13301;">
-							<?= $user['username']; ?>	
-				</div>
- 
-        <!-- box ujung segitiga -->
-        <?php $id_kategori = $postingan['kategori']; ?>
-				<div id="segitiga" style="border-left:solid 17.5px <?= $kategori[$id_kategori-1]['warna']; ?>;"></div>
-				<div id="persegi" style= "background: <?= $kategori[$id_kategori-1]['warna']; ?>;">
-						<p style="text-align: center;margin-top: 9px; font-size: 14px; font-weight: bold; color: black;"> <?= $kategori[$id_kategori-1]['nama']; ?>
-						</p>
-				</div>
-     
-				
-				<?php for($kom = 0 ; $kom < count($komentar); $kom++) :  ?>
-					<?php $username_komen = $komentar[$kom]['username']; 
-				$akun = $this->db->get_where('user', ['username' => $username_komen])->row_array();?>
-				<div>
-					<hr id="line1" align="right" width="100%" height="1px" color="#C13301" size="1">
-					<div>
-					<img id="img_story1" src="<?= base_url('res'); ?>/profile/<?= $akun['foto']?>">	
-					</div>
-					<div id="nametag1" style="font-weight: bold;color: #C13301;">
-							<?= $akun['nama_lengkap']; ?>
-					</div>
-					<p id="teks" style="text-align: left;font-size: 16px; margin-right:100px; color: black;">
-								<?= $komentar[$kom]['isi']; ?>
-							</p> 
-					<span id="reply" style="color: #C13301"><span><span style="color: #C13301; margin-right:-100px">Reply</span></span></span>
-				</div>
-				<?php endfor; ?>
 
-				<div>
-					<img id="like" src="<?= base_url('res'); ?>/postingan2_files/like1.png">
-					<p id="teks2" style="color:#C13301;font-weight: bold;font-size: 16px;">
-						<?= count($suka); ?> likes
-					</p>
-					<img id="share" src="<?= base_url('res'); ?>/postingan2_files/share.png">
-					<img id="download" src="<?= base_url('res'); ?>/postingan2_files/download.png">
-					<form action="<?= base_url('User/komentar?id='), $postingan['id'],"&page=",$halaman,"&username=",$username; ?>" method="post">
-						<input type="text" name="komentar" id="komentar" placeholder="	tambah komentar">
-						<button type="submit" id="kirim_komen" >
-						<img id="kirim_komen" src="<?= base_url('res'); ?>/kirim_komentar.png">
-						</button>
-					</form>
-				</div>
-			</div>
-		</div> 
+                        <!--Tombol Download dan Share-->
+                        <div class="col" style="margin-right: 3px; max-width: 40px; max-height:40px;">
+                            <a href="#">
+                                <img src="<?= base_url('res'); ?>/download.png" width="30px" height="30px"  alt="Unduh">
+                            </a>
+                        </div>
+                        <div class="col" style="margin-right: 15px; max-width: 40px; max-height:40px;">
+                            <a href="#">
+                                <img  src="<?= base_url('res'); ?>/share.png" width="30px" height="30px"  alt="Unduh">
+                            </a>
+                        </div>
+                        <!--CLOSE TOMBOL-->
 
-	
-</body></html>
+                    </div>
+                    <!--KOTAK KETIK KOMEN-->
+                    <div class="row" style=" height: 40px; margin-left: 15px; margin-right: 15px; background-color:none ;">
+                        <div class="col">
+                            <input style="border-radius: 50px;" type="text" class="form-control" placeholder="Ketik Komentar" aria-label="Komentar" aria-describedby="basic-addon1">
+                        </div>
+                        <!--TOMBOL KIRIM KOMEN-->
+                        <div class="col" style="margin-left: -15px; max-width: 55px; margin-top: 5px;">
+                            <a href="#">
+                                <img  src="<?= base_url('res'); ?>/kirimkomentar.png" width="30px" height="30px"  alt="Kirim Komentar">
+                            </a>
+                        </div>
+                    </div>
+                    <!--CLOSE KOTAK KOMEN-->
+                </div>
+            </div>
+        </div>
+        <!--CLOSE KONTEN-->
+
+
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</html>
