@@ -129,7 +129,8 @@
           <?php $userlain = $this->db->get_where('user', ['username' => $notif[$x]['dari_username']])->row_array(); 
           $postingan = $this->db->get_where('postingan', ['id' => $notif[$x]['id_postingan']])->row_array();
           $komentar = $this->db->get_where('komentar', ['id' => $notif[$x]['id_like_komentar']])->row_array();?>
-					<div id="notifbaru">
+          <a href="<?= base_url('User/postingan?username=0&postingan='), $postingan['id'], '&page='; ?>">	
+          <div id="notifbaru">
 						<img id="img_story" src="<?= base_url('res/profile/'), $userlain['foto']; ?>">
 						<div id="nametag" style="font-weight: bold;color: #C13301;">
 							<?= $userlain['username']; ?>
@@ -145,6 +146,7 @@
             </p>
             <?php } ?>
           </div>
+          <a>
           <?php endfor;
           }; ?>
 				</div>
