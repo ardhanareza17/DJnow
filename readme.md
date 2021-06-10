@@ -1,19 +1,18 @@
 <p align="center">
   <a href="">
-    <img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/logo.png" alt="DJnow" width=95 height=46>
+    <img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/logo.png" alt="DJnow" width=135 height=65>
   </a>
 
   <h2 align="center">Sistem Informasi DJnow</h2>
 
   <p align="center">
     Kelompok 4 - Paralel 3 </br>
-    Asisten Praktikum: </br>
-    - Qoriatul Khairunnisa </br>
-    - Indah Puspita
-    <br>
   </p>
 </p>
 
+## Asisten Praktiku
+- Qoriatul Khairunnisa </br>
+- Indah Puspita
 ## Nama Anggota Kelompok
 - Roni Sudarwan (G54170036): <i> Product Manager & Front-end </i>
 - Ibnu Fajar (G54170062): <i> Front-end </i>
@@ -26,7 +25,7 @@
 </br>
 
 ## User Analysis
-<h3> User Story <h/3> </br>
+User Story</br>
 - Sebagai user, agar dapat mengakses aplikasi DJNOW, saya dapat melakukan registrasi akun baik menggunakan email maupun terhubung dengan akun Google. </br>
 - Sebagai user yang telah berhasil membuat akun, agar dapat masuk ke dalam aplikasi, saya dapat melakukan "Login" </br>
 - Sebagai seorang user yang telah login, agar dapat mengabadikan karya saya, saya dapat mempublikasikannya di aplikasi DJnow </br>
@@ -64,7 +63,7 @@ Teknologi				: PHP, CSS/HTML, dan Javascript </br>
 - <i> Use Case Diagram </i>
 <p align="center">
 <a>
-<img src=, width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/usecase_new.png", width=700>
 </a>
 </p>
 
@@ -85,7 +84,7 @@ Teknologi				: PHP, CSS/HTML, dan Javascript </br>
 - <i> Entity Relationship Diagram </i>
 <p align="center">
 <a>
-<img src=, width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ERD%20DJNow%20.png", width=700>
 </a>
 </p>
 
@@ -129,13 +128,6 @@ Website ini memiliki beberapa skenario, yaitu:
 10. Halaman Data Unggahan: Admin dapat melihat tabel yang berisi informasi mengenai banyaknya unggahan yang telah ter-publikasikan. Admin juga dapat menghapus unggahan pengguna yang tidak memenuhi persyaratan.
 11. Halaman Kategori: Admin dapat melihat kategori apa saja yang tersedia pada website dan dapat menambahkan kategori tersebut.
 12. Logout : Pengguna dapat keluar dari segala halaman yang terdapat pada sistem dan menuju ke login page.
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title> Penggunaan Tag Tabel</title>
-</head>
-<body>
   
 <table border = "2">
   <tr>
@@ -144,19 +136,28 @@ Website ini memiliki beberapa skenario, yaitu:
     <th bgcolor="grey" colspan="1">Positif/Negatif</th>
     <th bgcolor="grey" colspan="1">Input</th>
     <th bgcolor="grey" colspan="1">Output</th>
+ </tr>
  <tr>
     <td>login01</hd>
-    <td>User dapat melakukan login menggunakan email dan password dengan benar</hd>
+    <td>User dapat melakukan login menggunakan username dan password dengan benar</hd>
     <td>Positif</hd>
     <td>Username dan Password yang benar</hd>
     <td>Login langsung ke Home Page</hd>
  </tr>
  <tr>
     <td>login02</hd>
+    <td>User gagal masuk jika memasukan username yang belum terdaftar</hd>
+    <td>Negatif</hd>
+    <td>Username yang belum terdaftar</hd>
+    <td>Peringatan bahwa username tersebut belum terdaftar</hd>
+  </tr>
+  <tr>
+    <td>login03</hd>
     <td>User gagal masuk jika salah memasukan email atau password</hd>
     <td>Negatif</hd>
-    <td>Username dan Password yang salah</hd>
+    <td>Username yang belum terdaftar</hd>
     <td>Tidak dapat masuk ke Home Page</hd>
+  </tr>
   <tr>
     <td>regis01</hd>
     <td>User mendftarkan diri</hd>
@@ -171,14 +172,50 @@ Website ini memiliki beberapa skenario, yaitu:
     <td>User mengosongkan alamat email</hd>
     <td>Menunjukkan bagian yang tidak diisi</hd>
   </tr>
+  <tr>
+    <td>regis03</hd>
+    <td>User mendaftar akun baru dengan username yang sudah terdaftar</hd>
+    <td>Negatif</hd>
+    <td>Username yang dimasukkan sudah terdaftar</hd>
+    <td>Peringatan bahwa harus mengisi username baru</hd>
+ </tr>
+ <tr>
+    <td>editprof01</hd>
+    <td>User ingin mengganti informasi diri</hd>
+    <td>Positif</hd>
+    <td>Mengganti biodata yang lama dengan yang baru</hd>
+    <td>Informasi diri ter-update dan kembali ke menu "Profile"</hd>
+  </tr>
+  <tr>
+    <td>editprof02</hd>
+    <td>User ingin mengganti username</hd>
+    <td>Negatif</hd>
+    <td>Kolom mengubah username ditekan</hd>
+    <td>Tidak dapat diubah dan tidak berhasil mengganti username</hd>
+  </tr>
+  <tr>
+    <td>upload01</hd>
+    <td>User ingin mengunggah foto</hd>
+    <td>Positif</hd>
+    <td>User memasukkan foto yang sesuai</hd>
+    <td>Foto terunggah, dan akan terunggah di laman "Home" serta "Profile"</hd>
+  </tr>
+  <tr>
+    <td>upload02</hd>
+    <td>User ingin mengunggah foto</hd>
+    <td>Negatif</hd>
+    <td>User memasukkan foto yang memiliki ukuran lebih dari 2 MB</hd>
+    <td>Foto tidak dapat diunggah dan terdapat peringatan bahwa file harus lebih kecil dari 2</hd>
+  </tr>
  </table>
- </body>
- </html>
 
 ## Saran Untuk Pengembangan Selanjutnya
 1. Dapat mengeksplorasi lebih jauh bagaimana cara admin untuk me-validasikan sebuah unggahan yang dikirimkan oleh pengguna.
+2. Kembangkan fitur yang belum berjalan dengan baik, seperti "search bar", hyperlink contact, save dan share
+3. Sistem keamanannya masih perlu diperbaiki lagi
 
-## Link Docs
+## Link Dokumentasi Lainnya
 https://ipb.link/site-djnow </br>
 https://ipb.link/github-djnow </br>
 https://ipb.link/trello-djnow </br>
+https://ipb.link/figma-djnow
