@@ -137,6 +137,10 @@ class User extends CI_Controller
 
   public function upload()
   {
+    $kat = $_POST['kategori'];
+    $kategori = $this->db->get_where('kategori_postingan', ['nama' => $kat])->row_array();
+    //print_r($hasil);
+    //die;
     $date = date('Y-m-d');
     //ambil data user dari db
     $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
@@ -163,7 +167,7 @@ class User extends CI_Controller
                 $posting = array(
                   'username' => $data['user']['username'],
                   'foto' => $foto,
-                  'kategori' => '1',
+                  'kategori' => $kategori['id'],
                   'tanggal_posting' => $date);
                   $this->db->insert('postingan', $posting);
                  } else {echo "ga keupload";}
@@ -253,6 +257,50 @@ class User extends CI_Controller
     //ini nanti diisi sama tampilan fix homepage, di awah ini cuma ngetes doang
     $this->load->view('User/notifikasi', $data);
   }
+
+
+  public function suka_home()
+  {
+    $username = $this->session->userdata('username') ;
+    $id_postingan = $_GET['id_postingan'];
+    $like = $_GET['suka'];
+    
+    
+    if($like == 1){
+      $array = array(
+        'id_postingan' => $id_postingan,
+        'username' => $username);
+        $this->db->insert('suka', $array);
+        
+      $this->db->where('id_postingan', $id_postingan);
+      $this->db->where('username', $username);
+      $suka = $this->db->get('suka')->row_array();
+      $array1 = array(
+        'jenis' => 1,
+        'dari_username' => $username,
+        'id_postingan' => $id_postingan,
+        'id_like_komentar' => $suka['id']);
+        $this->db->insert('notifikasi', $array1);
+
+    } else {
+      $this->db->where('id_postingan', $id_postingan);
+      $this->db->where('username', $username);
+      $suka = $this->db->get('suka')->row_array();
+      
+      $this->db->where('id_postingan', $id_postingan);
+      $this->db->where('dari_username', $username);
+      $this->db->where('jenis', 1);
+      $this->db->where('id_like_komentar', $suka['id']);
+      $this->db->delete('notifikasi');
+
+      $this->db->where('id_postingan', $id_postingan);
+      $this->db->where('username', $username);
+      $this->db->delete('suka');
+
+
+    } redirect("User");
+  }
+
 
   public function suka()
   {
