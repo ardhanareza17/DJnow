@@ -251,10 +251,12 @@ Website ini memiliki beberapa skenario, yaitu:
 ## Video Demonstrasi
 <p align="center">
 <a>
-<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/qrcode_demo.png", width=300>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/qrcode_demo.png", width=100>
 </a>
 </p>
-https://ipb.link/demo-djnow
+<p align="center"> 
+https://ipb.link/demo-djnow 
+</p>
 
 ## Link Dokumentasi Lainnya
 https://ipb.link/site-djnow </br>
