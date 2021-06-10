@@ -100,9 +100,31 @@ Fungsi utama yang dikembangkan yaitu, "Upload foto" untuk me-publikasikan karya;
 
 - Fungsi CRUD
 1. Create: 
+-menambahkan data akun ke tabel "user" saat user baru melakukan proses registrasi
+-menambahkan data postingan ke tabel "postingan" saat user melakukan proses upload postingan
+-menambahkan data like ke tabel "suka" saat user menyukai sebuah postingan
+-menambahkan data komentar ke tabel "komentar" saat user memberikan komentar pada sebuah postingan
+-menambahkan data notifikasi ke tabel "notifikasi" saat ada user lain yang menyukai atau memberi komentar pada postingan kita
 2. Read: 
+-mengambil data dari tabel "user" untuk dicocokkan saat proses login
+-mengambil data dari tabel "postingan" untuk ditampilkan di halaman : home(user), profile(user), postingan(user)
+-mengambil data dari tabel "notifikasi" untuk ditampilkan di halaman notifikasi
+-mengambil data dari tabel "suka" untuk menampilkan jumlah like pada suatu postingan
+-mengambil data dari tabel "komentar" untuk menampilkan isi komentar dari tiap postingan
+-mengambil data dari tabel "kategori_postingan" untuk ditampilkan di tiap postingan
+-mengambil data dari tabel "user" untuk ditampilkan di halaman profile
+-mengambil data dari tabel "user" untuk ditampilkan di halaman data_pengguna(admin)
+-mengambil data dari tabel "postingan" untuk ditampilkan di halaman data_unggahan(admin)
+-mengambil data dari tabel "kategori_postingan" untuk ditampilkan di halaman kategori(admin)
 3. Update: 
+-mengupdate data pada tabel "user" saat melakukan proses edit profile
 4. Delete: 
+-menghapus data dari tabel "suka" saat user melakukan proses unlike
+-menghapus data dari tabel "notifikasi" saat user melakukan proses unlike
+-menghapus data dari tabel "postingan" oleh admin
+-menghapus data dari tabel "suka" pada suatu postingan yang telah dihapus oleh admin
+-menghapus data dari tabel "komentar" pada suatu postingan yang telah dihapus oleh admin
+-menghapus data dari tabel "notifikasi" untuk suatu postingan yang telah dihapus oleh admin
 </br>
 
 ## Hasil Implementasi
