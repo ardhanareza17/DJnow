@@ -145,6 +145,7 @@ Fungsi utama yang dikembangkan yaitu, "Upload foto" untuk me-publikasikan karya;
 <img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_adminkategori.jpg", width=700>
 </a>
 </p>
+
 ## Testing
 Website ini memiliki beberapa skenario, yaitu:
 1. Landing Page: Pengguna akan diarahkan ke landing page ketika menjalankan aplikasi kemudian pengguna akan menuju login page.
