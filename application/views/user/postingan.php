@@ -10,7 +10,38 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <title>DJNOW (Design Jaman Now)</title>
         <style type="text/css">
+        <?php $id_kategori = $postingan['kategori'];?>
             body { background: #FFE5B4 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+            .segitigakanan {
+                color: black;  /* Warna Font Kategori */
+                width: 100px;
+                height: 35px;
+                position: relative;
+                background: <?= $kategori[$id_kategori-1]['warna']; ?>; /* Warna Background Kategori */
+            }
+            .segitigakanan:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-top: 17.5px solid transparent;
+                border-bottom: 17.5px solid transparent;
+            }
+            .segitigakanan:before {
+                content: "";
+                position: absolute;
+                right: -20px;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-left: 20px solid <?= $kategori[$id_kategori-1]['warna']; ?>; /* Warna Background Kategori samakan dengan warna atas*/
+                border-top: 17.5px solid transparent;
+                border-bottom: 17.5px solid transparent;
+            }
+            /* CLose Kotak Kategori */
         </style>
     </head>
     <body>
@@ -72,9 +103,19 @@
                                             </div>
                                         </div>
                                         <div class="col d-flex align-items-center" style="max-width: 145px;">
-                                            <a href="#">
-                                                <img src="<?= base_url('res'); ?>/grafis_tag.png" width="130px" height="35" alt="">
+
+                                        <?php $id_kategori = $postingan['kategori'];?>
+                                             <!--Kotak Kategori-->
+                                             <a href="#">
+                                                <button style="background-color: transparent; border: 0px;">
+                                                  <div class="segitigakanan " style=" margin-left :-8px;;">
+                                                     <div class="row d-flex justify-content-center" style="padding-top: 5px;">
+                                                         <?= $kategori[$id_kategori-1]['nama']; ?>
+                                                     </div>
+                                                  </div>
+                                                </button>
                                             </a>
+                                            <!--Close Kotak Kategori-->
                                         </div>
                                     </div>
                                 </div>
