@@ -54,30 +54,30 @@
 				height: 50px;
 				border-radius: 50%;
 				margin-left: 30px;
-				margin-top: 60px;
-				margin-bottom: -30px;
+				margin-top: 40px;
+				margin-bottom: -40px;
 				border:none;
 				padding: 4px;
 			}
 
 			#upload_img{
-				width: 550px;
+				width: 300px;
 				height: 40px;
 				margin-bottom: 120px;
-				margin-top: -80px;
+				margin-top: -100px;
 				text-align: center;
 				background-color: #E0DFD5;
 				border:none;
 				padding: 4px;
 			}
 
-			#option{
+			#option1{
 				width: 200px;
 				height: 40px;
 				background-color: #F2994A;
+				margin-top: -163px;
+				margin-right: 240px;
 				float: right;
-				margin-top: 40px;
-				margin-right: 20px;
 			}
 
 			#button1{
@@ -85,9 +85,8 @@
 				height: 40px;
 				background-color: #C13301 ;
 				float: right;
-				margin-top: -85px;
+				margin-top: -83px;
 				margin-right: 20px;
-			}
 
 			#story{
 				border-radius: 15px; 
@@ -219,9 +218,13 @@
 						<img id="profile_pic" src="res/profile/<?= $user['foto']?>">
 						&nbsp; 
 						<input type="file" id="upload_img" name="upload_img" label="Pilih Gambar" <?php // placeholder="upload desain anda disini" ?>>		
-						<!--<select id="option">
-							<option>Pilih Kategori</option>
-						</select>	-->
+						<div>
+							<select id="option1" style="cursor: pointer;" >
+								<option style="cursor: pointer;">Pilih Kategori</option>
+								<option>Grafis</option>
+								<option>Busana</option>
+							</select>
+						</div>	
 						<div style="margin-top:-80px; cursor:pointer;">
 							<button style="cursor:pointer;" type="submit" id="button1"> Upload </button>
 						</div>
