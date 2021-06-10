@@ -10,7 +10,7 @@
   </p>
 </p>
 
-## Asisten Praktiku
+## Asisten Praktikum
 - Qoriatul Khairunnisa </br>
 - Indah Puspita
 ## Nama Anggota Kelompok
@@ -77,7 +77,7 @@ Teknologi				: PHP, CSS/HTML, dan Javascript </br>
 - <i> Class Diagram </i>
 <p align="center">
 <a>
-<img src=, width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/Class%20Diagram%20DJNow.png", width=700>
 </a>
 </p>
 
@@ -99,41 +99,52 @@ Teknologi				: PHP, CSS/HTML, dan Javascript </br>
 Fungsi utama yang dikembangkan yaitu, "Upload foto" untuk me-publikasikan karya; "Home" untuk menampilkan referensi karya-karya oleh desainer; "Like" dan "Comment" untuk memberikan apresiasi terhadap karya; "Profile" untuk menampilkan portofolio diri dan mengunjungi potofolio pengguna lain.
 
 - Fungsi CRUD
-1. Create: 
--menambahkan data akun ke tabel "user" saat user baru melakukan proses registrasi
--menambahkan data postingan ke tabel "postingan" saat user melakukan proses upload postingan
--menambahkan data like ke tabel "suka" saat user menyukai sebuah postingan
--menambahkan data komentar ke tabel "komentar" saat user memberikan komentar pada sebuah postingan
--menambahkan data notifikasi ke tabel "notifikasi" saat ada user lain yang menyukai atau memberi komentar pada postingan kita
-2. Read: 
--mengambil data dari tabel "user" untuk dicocokkan saat proses login
--mengambil data dari tabel "postingan" untuk ditampilkan di halaman : home(user), profile(user), postingan(user)
--mengambil data dari tabel "notifikasi" untuk ditampilkan di halaman notifikasi
--mengambil data dari tabel "suka" untuk menampilkan jumlah like pada suatu postingan
--mengambil data dari tabel "komentar" untuk menampilkan isi komentar dari tiap postingan
--mengambil data dari tabel "kategori_postingan" untuk ditampilkan di tiap postingan
--mengambil data dari tabel "user" untuk ditampilkan di halaman profile
--mengambil data dari tabel "user" untuk ditampilkan di halaman data_pengguna(admin)
--mengambil data dari tabel "postingan" untuk ditampilkan di halaman data_unggahan(admin)
--mengambil data dari tabel "kategori_postingan" untuk ditampilkan di halaman kategori(admin)
-3. Update: 
--mengupdate data pada tabel "user" saat melakukan proses edit profile
-4. Delete: 
--menghapus data dari tabel "suka" saat user melakukan proses unlike
--menghapus data dari tabel "notifikasi" saat user melakukan proses unlike
--menghapus data dari tabel "postingan" oleh admin
--menghapus data dari tabel "suka" pada suatu postingan yang telah dihapus oleh admin
--menghapus data dari tabel "komentar" pada suatu postingan yang telah dihapus oleh admin
+1. Create: </br>
+-menambahkan data akun ke tabel "user" saat user baru melakukan proses registrasi </br>
+-menambahkan data postingan ke tabel "postingan" saat user melakukan proses upload postingan </br>
+-menambahkan data like ke tabel "suka" saat user menyukai sebuah postingan </br>
+-menambahkan data komentar ke tabel "komentar" saat user memberikan komentar pada sebuah postingan </br>
+-menambahkan data notifikasi ke tabel "notifikasi" saat ada user lain yang menyukai atau memberi komentar pada postingan kita</br>
+2. Read: </br>
+-mengambil data dari tabel "user" untuk dicocokkan saat proses login</br>
+-mengambil data dari tabel "postingan" untuk ditampilkan di halaman : home(user), profile(user), postingan(user)</br>
+-mengambil data dari tabel "notifikasi" untuk ditampilkan di halaman notifikasi</br>
+-mengambil data dari tabel "suka" untuk menampilkan jumlah like pada suatu postingan</br>
+-mengambil data dari tabel "komentar" untuk menampilkan isi komentar dari tiap postingan</br>
+-mengambil data dari tabel "kategori_postingan" untuk ditampilkan di tiap postingan</br>
+-mengambil data dari tabel "user" untuk ditampilkan di halaman profile</br>
+-mengambil data dari tabel "user" untuk ditampilkan di halaman data_pengguna(admin)</br>
+-mengambil data dari tabel "postingan" untuk ditampilkan di halaman data_unggahan(admin)</br>
+-mengambil data dari tabel "kategori_postingan" untuk ditampilkan di halaman kategori(admin)</br>
+3. Update: </br>
+-mengupdate data pada tabel "user" saat melakukan proses edit profile</br>
+4. Delete: </br>
+-menghapus data dari tabel "suka" saat user melakukan proses unlike</br>
+-menghapus data dari tabel "notifikasi" saat user melakukan proses unlike</br>
+-menghapus data dari tabel "postingan" oleh admin</br>
+-menghapus data dari tabel "suka" pada suatu postingan yang telah dihapus oleh admin</br>
+-menghapus data dari tabel "komentar" pada suatu postingan yang telah dihapus oleh admin</br>
 -menghapus data dari tabel "notifikasi" untuk suatu postingan yang telah dihapus oleh admin
 </br>
 
 ## Hasil Implementasi
 - Screenshot Sistem
-<img src=, width=700> </br>
-<img src=, width=700> </br>
-<img src=, width=700> </br>
-<img src=, width=700> </br>
-- Link Aplkikasi (jika sudah deploy)
+<p align="center">
+<a>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_regis.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_login.jpg", width=700> </br>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_home.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_notifikasi.jpg", width=700> </br>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_profile.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_editprofile.jpg", width=700> </br>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_mengunjungiuserlain.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_openpost.jpg", width=700> </br>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_admindashboard.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_admindatapengguna.jpg", width=700> </br>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_admindataunggahan.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_adminkategori.jpg", width=700>
+</a>
+</p>
 
 ## Testing
 Website ini memiliki beberapa skenario, yaitu:
