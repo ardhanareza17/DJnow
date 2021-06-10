@@ -70,7 +70,7 @@ Teknologi				: PHP, CSS/HTML, dan Javascript </br>
 - <i> Activity Diagram </i>
 <p align="center">
 <a>
-<img src=, width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/Activity%20Diagram.png", width=700>
 </a>
 </p>
 
