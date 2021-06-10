@@ -98,9 +98,11 @@
                   </div>
                 <div class="row" style="height: 100vh; margin-top:5px; font-size:16px;  margin-right: 20px; margin-left: 32px; background-color: #FDFAE6;">
                     <div class="col" style="margin-left: 10px !important; margin-top: 10px;">
+                      <a href="<?= base_url('Admin/tambah_kategori'); ?>">
                         <button type="button" class="btn text-start" style="width: 190px; font-weight: 500; border-radius: 8px; margin-bottom: 20px; font-size: 24px; color: #FDFAE6; background-color: #36B167;">
                             + Tambah
                         </button>
+                      </a>
                     </div>
                     <div class="col text-end" style="margin-right: 12px !important; margin-top: 10px;">
                       Total Kategori : <?= count($kategori); ?>

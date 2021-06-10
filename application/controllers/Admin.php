@@ -4,6 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends CI_Controller 
 {
 
+
+  public function __construct()
+  {
+    parent::__construct();
+    $this->load->library('form_validation');
+  }
+
   public function index() 
   {
     $data['title'] = 'Dashboard';
@@ -78,6 +85,30 @@ class Admin extends CI_Controller
 
     redirect("Admin/tabel_unggahan");
 
+  }
+
+
+  public function tambah_kategori()
+  {
+    $data['title'] = 'Kategori';
+    $this->form_validation->set_rules('nama_kategori', 'Nama', 'required|trim', [
+      'required' => 'Nama Kategori tidak boleh kosong!',
+    ]);
+
+    if($this->form_validation->run() == false){
+      //ini nanti diisi sama tampilan fix homepage, di awah ini cuma ngetes doang
+        $this->load->view('admin/tambah_kategori', $data);
+      } else {
+        $nama_kategori = $this->input->post('nama_kategori');
+        $warna = $this->input->post('pilih_warna');
+
+        $kategori = array(
+          'nama' => $nama_kategori,
+          'warna' => $warna,
+          'logo' => 'Group.png');
+          $this->db->insert('kategori_postingan', $kategori);
+          redirect("Admin/kategori");
+      }
   }
   
 }
