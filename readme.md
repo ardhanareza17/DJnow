@@ -248,6 +248,14 @@ Website ini memiliki beberapa skenario, yaitu:
 2. Kembangkan fitur yang belum berjalan dengan baik, seperti "search bar", hyperlink contact, save dan share
 3. Sistem keamanannya masih perlu diperbaiki lagi
 
+## Video Demonstrasi
+<p align="center">
+<a>
+<img src="./xampp/htdocs/DJnow/res/qrcode_demo", width=700>
+</a>
+</p>
+https://ipb.link/demo-djnow
+
 ## Link Dokumentasi Lainnya
 https://ipb.link/site-djnow </br>
 https://ipb.link/github-djnow </br>
