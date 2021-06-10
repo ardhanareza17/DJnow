@@ -153,7 +153,7 @@
                                 <div class="row">
                                     <div class="col align-self-center position-absolute">
                                         <div class="row" style="font-weight: 700; margin-left: 20px; font-size: 37px;">
-                                            3
+                                            <?= count($kategori); ?>
                                         </div>
                                         <div class="row" style="font-weight: 400; margin-bottom:5px; font-size: 15px; margin-left: 20px;">
                                             Kategori

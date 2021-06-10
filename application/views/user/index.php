@@ -221,7 +221,7 @@
 						<input type="file" id="upload_img" name="upload_img" label="Pilih Gambar" <?php // placeholder="upload desain anda disini" ?>>		
 						<div>
 							<select id="option1" name="kategori" style="cursor: pointer;" >
-								<option style="cursor: pointer;">Pilih Kategori</option>
+								<option value="desain" style="cursor: pointer;">Pilih Kategori</option>
 								<?php for($k=0;$k<count($kategori);$k++) : ?>
 								<option value= <?= $kategori[$k]['nama']; ?>><?= $kategori[$k]['nama']; ?></option>
 								<?php endfor; ?>
@@ -316,7 +316,7 @@
 													<img id="icon" src="<?= base_url('res/bar_postingan'); ?>/like_merah.png">
 												</a>
 												<?php } else { ?>
-												<a href="<?= base_url('User/suka_home?suka=0&id_postingan='), $postingan[$jumlah-2]['id']; ?>"> 
+												<a href="<?= base_url('User/suka_home?suka=1&id_postingan='), $postingan[$jumlah-2]['id']; ?>"> 
 													<img id="icon" src="<?= base_url('res/bar_postingan'); ?>/like_bolong.png">
 												</a>
 												<?php } ?>
