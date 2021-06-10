@@ -251,7 +251,7 @@ Website ini memiliki beberapa skenario, yaitu:
 ## Video Demonstrasi
 <p align="center">
 <a>
-<img src="./xampp/htdocs/DJnow/res/qrcode_demo", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/qrcode_demo.png", width=300>
 </a>
 </p>
 https://ipb.link/demo-djnow
