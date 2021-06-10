@@ -104,7 +104,8 @@ Fungsi utama yang dikembangkan yaitu, "Upload foto" untuk me-publikasikan karya;
 -menambahkan data postingan ke tabel "postingan" saat user melakukan proses upload postingan </br>
 -menambahkan data like ke tabel "suka" saat user menyukai sebuah postingan </br>
 -menambahkan data komentar ke tabel "komentar" saat user memberikan komentar pada sebuah postingan </br>
--menambahkan data notifikasi ke tabel "notifikasi" saat ada user lain yang menyukai atau memberi komentar pada postingan kita</br>
+-menambahkan data notifikasi ke tabel "notifikasi" saat ada user lain yang menyukai atau memberi komentar pada postingan kita
+-menambahkan data kategori ke tabel "kategori_postingan" oleh admin</br>
 2. Read: </br>
 -mengambil data dari tabel "user" untuk dicocokkan saat proses login</br>
 -mengambil data dari tabel "postingan" untuk ditampilkan di halaman : home(user), profile(user), postingan(user)</br>
