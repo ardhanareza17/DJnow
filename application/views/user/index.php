@@ -61,23 +61,23 @@
 			}
 
 			#upload_img{
-				width: 550px;
+				width: 300px;
 				height: 40px;
 				margin-bottom: 120px;
-				margin-top: -80px;
+				margin-top: -100px;
 				text-align: center;
 				background-color: #E0DFD5;
 				border:none;
 				padding: 4px;
 			}
 
-			#option{
+			#option1{
 				width: 200px;
 				height: 40px;
 				background-color: #F2994A;
+				margin-top: -163px;
+				margin-right: 240px;
 				float: right;
-				margin-top: 40px;
-				margin-right: 20px;
 			}
 
 			#button1{
@@ -85,7 +85,7 @@
 				height: 40px;
 				background-color: #C13301 ;
 				float: right;
-				margin-top: -85px;
+				margin-top: -163px;
 				margin-right: 20px;
 			}
 
@@ -219,6 +219,14 @@
 						<img id="profile_pic" src="res/profile/<?= $user['foto']?>">
 						&nbsp; 
 						<input type="file" id="upload_img" name="upload_img" label="Pilih Gambar" <?php // placeholder="upload desain anda disini" ?>>		
+						<div>
+							<select id="option1" name="kategori" style="cursor: pointer;" >
+								<option style="cursor: pointer;">Pilih Kategori</option>
+								<?php for($k=0;$k<count($kategori);$k++) : ?>
+								<option value= <?= $kategori[$k]['nama']; ?>><?= $kategori[$k]['nama']; ?></option>
+								<?php endfor; ?>
+							</select>
+						</div>
 						<!--<select id="option">
 							<option>Pilih Kategori</option>
 						</select>	-->
@@ -229,6 +237,10 @@
 				</div>
 
 				<!--timeline story desain-->
+				<?php $isi = [];
+				for($l = 0 ; $l<count($suka); $l++){
+                            $isi[$l] =$suka[$l]['id_postingan'];
+                              } ?>
 				<?php $jumlah = count($postingan); ?>
 				<?php for ($x = ($jumlah+$jumlah%2)/2 - 1; $x >= 0 ; $x--) : ?>
 				<?php $id_kategori = $postingan[$jumlah-1]['kategori']; ?>
@@ -257,9 +269,15 @@
 							<a href="<?= base_url('User/postingan?username=0&postingan='), $id, '&page='; ?>">	
 								<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-1]['foto']; ?>">
 							<a>
-								<a> 
+								<?php  if( in_array($id, $isi)) { ?>
+								<a href="<?= base_url('User/suka_home?suka=0&id_postingan='), $postingan[$jumlah-1]['id']; ?>"> 
+									<img id="icon" src="<?= base_url('res/bar_postingan'); ?>/like_merah.png">
+								</a>
+								<?php } else { ?>
+								<a href="<?= base_url('User/suka_home?suka=1&id_postingan='), $postingan[$jumlah-1]['id']; ?>"> 
 									<img id="icon" src="<?= base_url('res/bar_postingan'); ?>/like_bolong.png">
 								</a>
+								<?php } ?>
 								<a>
 									<img id="icon1" src="<?= base_url('res/bar_postingan'); ?>/share_merah.png">
 								</a>
@@ -293,9 +311,15 @@
 							<a href="<?= base_url('User/postingan?username=0&postingan='), $id, '&page='; ?>">	
 												<img id="img_feed" src="<?= base_url('res/postingan/'), $postingan[$jumlah-2]['foto']; ?>">
 												<a>
-												<a> 
+												<?php  if( in_array($id, $isi)) { ?>
+												<a href="<?= base_url('User/suka_home?suka=0&id_postingan='), $postingan[$jumlah-2]['id']; ?>"> 
+													<img id="icon" src="<?= base_url('res/bar_postingan'); ?>/like_merah.png">
+												</a>
+												<?php } else { ?>
+												<a href="<?= base_url('User/suka_home?suka=0&id_postingan='), $postingan[$jumlah-2]['id']; ?>"> 
 													<img id="icon" src="<?= base_url('res/bar_postingan'); ?>/like_bolong.png">
 												</a>
+												<?php } ?>
 												<a>
 													<img id="icon1" src="<?= base_url('res/bar_postingan'); ?>/share_merah.png">
 												</a>
