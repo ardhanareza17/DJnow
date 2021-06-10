@@ -158,7 +158,6 @@ class User extends CI_Controller
               $config['upload_path'] = './res/postingan/';
 
               $this->load->library('upload', $config);
-              
               if($this->upload->do_upload('upload_img')){
                 $foto = $this->upload->data('file_name');
                 $posting = array(
@@ -167,7 +166,6 @@ class User extends CI_Controller
                   'kategori' => '1',
                   'tanggal_posting' => $date);
                   $this->db->insert('postingan', $posting);
-                  
                  } else {echo "ga keupload";}
               } else {echo "ga keambil datanya" ;}
       
@@ -313,5 +311,7 @@ class User extends CI_Controller
 
 
   }
+
+
 
 }

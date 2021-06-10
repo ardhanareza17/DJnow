@@ -61,5 +61,23 @@ class Admin extends CI_Controller
   }
 
 
+  public function hapus()
+  {
+    $id_postingan = $this->input->post('id_postingan');
+    $this->db->where('id_postingan', $id_postingan);
+    $this->db->delete('notifikasi');
+    
+    $this->db->where('id_postingan', $id_postingan);
+    $this->db->delete('suka');
+    
+    $this->db->where('id_postingan', $id_postingan);
+    $this->db->delete('komentar');
+
+    $this->db->where('id', $id_postingan);
+    $this->db->delete('postingan');
+
+    redirect("Admin/tabel_unggahan");
+
+  }
   
 }

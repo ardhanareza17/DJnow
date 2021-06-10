@@ -142,7 +142,10 @@
                               <td><?= $postingan[$y]['username']; ?></td>
                               <td><?= $postingan[$y]['id']; ?></td>
                               <td><?= $kategori[$id_kategori-1]['nama']; ?></td>
-                              <td> </td>
+                              <td> <form class="tombolhapus" action="<?= base_url('Admin'); ?>/hapus" method="post">
+                                  <input type="hidden" name ="id_postingan" value= <?= $postingan[$y]['id']; ?>>
+                                  <button type="submit" class="btn btn-danger" style="font-size: 14px; height: 30px;">Hapus</button>
+                                </form></td>
                             </tr>
                           <?php endfor; ?>
                           </tbody>
