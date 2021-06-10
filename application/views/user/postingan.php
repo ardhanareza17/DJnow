@@ -26,7 +26,7 @@
                     <div class="col" style="width: 100vw; background-color: none;">
                         <img src="<?= base_url('res'); ?>/logo.png" width="95px" height="46px">
                     </div>
-                    <div class="col" style="margin-top: -8px; margin-bottom: -15px; max-width: 550px; background-color: #F2994A;">
+                    <div class="col" style="margin-top: -8px; margin-right:-3px; margin-bottom: -15px; max-width: 550px; background-color: #F2994A;">
                         
                     </div>
                 </div> 
@@ -272,17 +272,19 @@
 
                     </div>
                     <!--KOTAK KETIK KOMEN-->
+                    <form action="<?= base_url('User/komentar?id='), $postingan['id'],"&page=",$halaman,"&username=",$username; ?>" method="post">
                     <div class="row" style=" height: 40px; margin-left: 15px; margin-right: 15px; background-color:none ;">
                         <div class="col">
-                            <input style="border-radius: 50px;" type="text" class="form-control" placeholder="Ketik Komentar" aria-label="Komentar" aria-describedby="basic-addon1">
+                            <input name="komentar" autocomplete="off" style="border-radius: 50px;" type="text" class="form-control" placeholder="Ketik Komentar" aria-label="Komentar" aria-describedby="basic-addon1">
                         </div>
                         <!--TOMBOL KIRIM KOMEN-->
                         <div class="col" style="margin-left: -15px; max-width: 55px; margin-top: 5px;">
-                            <a href="#">
+                            <button type="submit" id="kirim_komen" style="background-color:transparent !important; margin-top:-5px; border:0px; margin-left:-5px;">
                                 <img  src="<?= base_url('res'); ?>/kirimkomentar.png" width="30px" height="30px"  alt="Kirim Komentar">
-                            </a>
+                            </button>
                         </div>
                     </div>
+                    </form>
                     <!--CLOSE KOTAK KOMEN-->
                 </div>
             </div>

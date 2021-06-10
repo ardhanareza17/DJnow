@@ -105,7 +105,7 @@
 				<img id="rata1" src="<?= base_url('res/navbar_user'); ?>/logout2.png" style="width:20px ; height:20px; float:right;">
 				<a>
 				<a href="<?= base_url('user/profile '); ?>">
-				<img id="rata1" src="<?= base_url('res'); ?>/profile/<?= $user['foto']?>" style="width:20px ; height:20px; float:right;">
+				<img id="rata1" src="<?= base_url('res'); ?>/profile/<?= $user['foto']?>" style="border-radius:50%; width:20px ; height:20px; float:right;">
 				<a>
 				<a href="<?= base_url('User/notifikasi'); ?>">
 					<img id="rata1" src="<?= base_url('res/navbar_user'); ?>/notifikasi1.png" style="width:20px ; height:20px; float:right;">
@@ -145,7 +145,7 @@
 							<?= $user['email']; ?>
 						</p> 
 						<a href="<?= base_url('user/edit '); ?>">
-							<button id="button0" style="color:white;">
+							<button id="button0" style="color:white;cursor:pointer;">
 								Edit Profile
 							</button>
 						<a>

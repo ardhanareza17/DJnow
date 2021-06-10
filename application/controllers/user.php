@@ -137,6 +137,7 @@ class User extends CI_Controller
 
   public function upload()
   {
+    $date = date('Y-m-d');
     //ambil data user dari db
     $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 
@@ -157,15 +158,16 @@ class User extends CI_Controller
               $config['upload_path'] = './res/postingan/';
 
               $this->load->library('upload', $config);
-        
-        
-                if($this->upload->do_upload('upload_img')){
-                  $foto = $this->upload->data('file_name');
-                  $posting = array(
+              
+              if($this->upload->do_upload('upload_img')){
+                $foto = $this->upload->data('file_name');
+                $posting = array(
                   'username' => $data['user']['username'],
                   'foto' => $foto,
-                  'kategori' => '1');
+                  'kategori' => '1',
+                  'tanggal_posting' => $date);
                   $this->db->insert('postingan', $posting);
+                  
                  } else {echo "ga keupload";}
               } else {echo "ga keambil datanya" ;}
       
@@ -206,11 +208,26 @@ class User extends CI_Controller
       'username' => $username,
       'isi' => $isi);
       $this->db->insert('komentar', $komen);
+
+
+      $this->db->where('id_postingan', $id_postingan);
+      $this->db->where('username', $username);
+      $this->db->where('isi', $isi);
+      $komentar = $this->db->get('komentar')->row_array();
+      $array1 = array(
+        'jenis' => 2,
+        'dari_username' => $username,
+        'id_postingan' => $id_postingan,
+        'id_like_komentar' => $komentar['id']);
+        $this->db->insert('notifikasi', $array1);
+
+
     $data['title'] = 'Profile';
     $data['username'] = $_GET['username'];
     //ambil data user dari db
     $data['postingan'] = $this->db->get_where('postingan', ['id' =>  $id_postingan])->row_array();
     $data['user'] = $this->db->get_where('user', ['username' => $data['postingan']['username']])->row_array();
+    $data['aku'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     $data['kategori'] = $this->db->query("SELECT * FROM kategori_postingan")->result_array();
     $data['komentar'] = $this->db->get_where('komentar', ['id_postingan' =>  $id_postingan])->result_array();
     $data['suka'] = $this->db->get_where('suka', ['id_postingan' => $id_postingan])->result_array();

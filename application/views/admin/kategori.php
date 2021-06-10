@@ -123,7 +123,7 @@
                                             </div>
                                         </div>
                                         <div class="col text-end">
-                                            <img style="margin-bottom: 5px; margin-right: 20px; margin-top: 15px;" src="<?= base_url('res/kategori/'), $kategori[$z]['logo']; ?>" width="85px" height="95px">
+                                            <img style="margin-bottom: 5px; margin-right: 20px; margin-top: 15px;" src="<?= base_url('res/kategori/Group.png'); ?>" width="85px" height="95px">
                                         </div>
                                     </div>
                                     <div class="row" style="background-color: white; opacity: 0.3;">
