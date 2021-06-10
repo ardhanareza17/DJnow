@@ -187,9 +187,9 @@ Website ini memiliki beberapa skenario, yaitu:
   </tr>
   <tr>
     <td>login03</hd>
-    <td>User gagal masuk jika salah memasukan email atau password</hd>
+    <td>User gagal masuk karena password salah</hd>
     <td>Negatif</hd>
-    <td>Username yang belum terdaftar</hd>
+    <td>Memasukan username dan password yang tidak cocok< </hd>
     <td>Tidak dapat masuk ke Home Page</hd>
   </tr>
   <tr>
@@ -208,6 +208,13 @@ Website ini memiliki beberapa skenario, yaitu:
   </tr>
   <tr>
     <td>regis03</hd>
+    <td>User memasukkan "password" dan "konfirmasi password" yang tidak sama</hd>
+    <td>Negatif</hd>
+    <td>User salah ketik saat mengisi "konfirmasi password" sehingga berbeda dengan apa yang dimasukkan di "password"</hd>
+    <td>Peringatan bahwa harus mengisi "password" dan "konfirmasi password" yang sama</hd>
+ </tr>
+   <tr>
+    <td>regis04</hd>
     <td>User mendaftar akun baru dengan username yang sudah terdaftar</hd>
     <td>Negatif</hd>
     <td>Username yang dimasukkan sudah terdaftar</hd>
