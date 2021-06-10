@@ -10,7 +10,7 @@
   </p>
 </p>
 
-## Asisten Praktiku
+## Asisten Praktikum
 - Qoriatul Khairunnisa </br>
 - Indah Puspita
 ## Nama Anggota Kelompok
@@ -77,7 +77,7 @@ Teknologi				: PHP, CSS/HTML, dan Javascript </br>
 - <i> Class Diagram </i>
 <p align="center">
 <a>
-<img src=, width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/Class%20Diagram%20DJNow.png", width=700>
 </a>
 </p>
 
@@ -107,12 +107,22 @@ Fungsi utama yang dikembangkan yaitu, "Upload foto" untuk me-publikasikan karya;
 
 ## Hasil Implementasi
 - Screenshot Sistem
-<img src=, width=700> </br>
-<img src=, width=700> </br>
-<img src=, width=700> </br>
-<img src=, width=700> </br>
-- Link Aplkikasi (jika sudah deploy)
-
+<p align="center">
+<a>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_regis.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_login.jpg", width=700> </br>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_home.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_notifikasi.jpg", width=700> </br>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_profile.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_editprofile.jpg", width=700> </br>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_mengunjungiuserlain.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_openpost.jpg", width=700> </br>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_admindashboard.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_admindatapengguna.jpg", width=700> </br>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_admindataunggahan.jpg", width=700>
+<img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/ss_adminkategori.jpg", width=700>
+</a>
+</p>
 ## Testing
 Website ini memiliki beberapa skenario, yaitu:
 1. Landing Page: Pengguna akan diarahkan ke landing page ketika menjalankan aplikasi kemudian pengguna akan menuju login page.
