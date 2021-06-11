@@ -1,6 +1,6 @@
 <p align="center">
   <a href="">
-    <img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/logo.png" alt="DJnow" width=135 height=65>
+    <img src="https://github.com/marisanurbaiti/DJnow/blob/main/res/logo.png" alt="DJnow" width=150 height=80>
   </a>
 
   <h2 align="center">Sistem Informasi DJnow</h2>
@@ -14,7 +14,7 @@
 - Qoriatul Khairunnisa </br>
 - Indah Puspita
 ## Nama Anggota Kelompok
-- Roni Sudarwan (G54170036): <i> Product Manager & Front-end </i>
+- Roni Sudarwan (G54170036): <i> Project Manager & Front-end </i>
 - Ibnu Fajar (G54170062): <i> Front-end </i>
 - Muhammad Reza A (G54180022): <i> Back-end </i>
 - Marisa Nurbaiti (G54180051): <i> UI/UX Designer" </i>
