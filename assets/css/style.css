@@ -1,0 +1,143 @@
+p.jargon {
+  padding-top: 20px;
+  font-family: calibri;
+  font-size: 15px;
+}
+.buttoncol {
+  padding-top: 20px;
+}
+.btn-pink {
+  border-radius: 8px;
+  background-color: #c13401 ; 
+  color: white;
+  font-family: calibri;
+  font-size: 15px;
+  padding: 7px 30px;
+}
+.btn-pink:hover{
+  background-color: #ad2d00;
+  color: white;
+}
+.btn-abu {
+  border-radius: 8px;
+  padding: 7px 30px;
+  font-family: calibri;
+  font-size: 15px;
+  border-color:#E0E0E0;
+}
+.btn-abu:hover{
+  background-color: #E0E0E0;
+  border-color: #E0E0E0;
+}
+
+.lengkap[type=text], select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 10px ;
+  display: inline-block;
+  border: 1px solid #c13401;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: calibri;
+  font-size: 15px;
+}
+.lengkap[type=email], select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 10px ;
+  display: inline-block;
+  border: 1px solid #c13401;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: calibri;
+  font-size: 15px;
+}
+.lengkap[type=date], select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 10px ;
+  display: inline-block;
+  border: 1px solid #c13401;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: black;
+  font-family: calibri;
+  font-size: 15px;
+}
+.lengkap[type=password], select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 10px ;
+  display: inline-block;
+  border: 1px solid #c13401;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: calibri;
+  font-size: 15px;
+}
+.logologo {
+  margin-bottom: 10px;
+}
+.kotak{
+  background-color: white;
+  margin-top: 0px !important;
+  margin-bottom: 0px;
+}
+.formdaftar {
+  border-radius: 0px;
+  width: 500px;
+  padding-top: 20px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #B36F57 !important;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #B36F57 !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #B36F57 !important;
+}
+.btndaftar {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #c13401 ; 
+  color: white;
+  border: 1px solid #c13401;
+  font-family: calibri;
+  font-size: 15px;
+}
+.btndaftar:hover{
+  background-color: #ad2d00;
+  color: white;
+}
+p.atau {
+  padding-top: 3px;
+  font-family: calibri;
+  color:#c13401;
+}
+.dobellogin{
+  margin-top: -10px;
+}
+.btn-google {
+  border: 1px solid #c13401;
+  width: 38.6%;
+  padding: 10px;
+}
+.btn-fb {
+  color: blue !important;
+  padding: 10px;
+  width: 38.6%;
+  border-color: white !important;
+}
+.btn-fb:hover{
+  border-color:#E0E0E0 !important;
+}
+.ingatsaya{
+  width: 38.6%;
+}
